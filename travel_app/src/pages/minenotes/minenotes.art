@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的笔记</title>
+</head>
+
+<body>
+    <div class="background">
+
+        <header class="header-layout">
+            <% include('../../components/header2/header.art')%>
+        </header>
+        <div class="nav">
+            <p class="wz">笔记本</p>
+        </div>
+        <div class="caogaoxiang mine-list">
+            <i class="iconfont icon-caogaoxiang icon-caogaoxiang0"></i>&nbsp;&nbsp;&nbsp;<span class="cgx">草稿箱</span>
+        </div>
+        <div class="ketangbiji mine-list">
+            <i class="iconfont icon-wenjianjia icon-wenjianjia0"></i>&nbsp;&nbsp;&nbsp;<span class="ktbj">课堂笔记</span>
+            <p class="xiaozi">私有</p>
+        </div>
+        <div class="gongkaibiji mine-list">
+            <i class="iconfont icon-24gf-folderPlus icon-24gf-folderPlus0"></i>&nbsp;&nbsp;&nbsp;<span
+                class="gkbj">公开笔记</span>
+            <p class="xiaozi">公开</p>
+        </div>
+        <div class="gerenbiji mine-list">
+            <i class="iconfont icon-wenjianjia icon-wenjianjia0"></i>&nbsp;&nbsp;&nbsp;<span class="grbj">个人笔记</span>
+            <p class="xiaozi">私有</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+import'../../assets/styles/reset.css';
+import'../../assets/styles/base.css';
+import'../../assets/styles/layout.css';
+import './course.css';
+import '../../components/header/header.js';
+import '../../components/tabbar/tabbar.js';
+import '../../components/backtop/backtop.js';
+import './components/xuanze/xuanze.js';
+import './components/jieshu/jieshu.js';
+import './components/tuike/tuike.js';

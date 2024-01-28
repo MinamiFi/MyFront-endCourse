@@ -1,0 +1,10 @@
+<div class="tuike">
+       <a href="./exitcourse.html" class="a-1">
+            <img src="../img/文件.png" class="i12">
+            <p class="t111">
+              已退课课程
+            </p>
+            <img src="../img/箭头.png" class="i2">
+       </a>
+</div>
+

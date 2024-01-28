@@ -1,0 +1,9 @@
+<div class="navi">
+    <ul id="navi-list" class="navi-list">
+        {{each navidata}}
+        <li class="navi-item" id="navi-item{{$value.id}}">
+            <h4>{{$value.title}}</h4>
+        </li>
+        {{/each}}
+    </ul>
+</div>

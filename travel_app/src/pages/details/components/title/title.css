@@ -1,0 +1,36 @@
+.title {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.title-name {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 25px;
+}
+
+.title-author {
+    position: absolute;
+    left: 10px;
+    top: 45px;
+    font-size: small;
+}
+
+.title-participants {
+    position: absolute;
+    right: 10px;
+    top: 55px;
+    color: gray;
+    font-size: 10px;
+}
+
+.title-line{
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color:rgba(200,200, 200,0.8);
+}

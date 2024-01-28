@@ -1,0 +1,23 @@
+.summary{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.summary-title{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.summary-name{
+    margin-left: 5%;
+    margin-top: 30px;
+    margin-bottom : 10px;
+}
+
+.summary-content{
+    margin-left: 5%;
+    width: 90%;
+    font-size: 14px;
+    color: gray;
+}

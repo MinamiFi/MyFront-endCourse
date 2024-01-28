@@ -1,0 +1,10 @@
+<div class="title">
+    {{each titledata}}
+    <h3 class="title-name">{{$value.name}}</h3>
+    <div class="title-author">{{$value.author}}</div>
+    <div class="title-participants">{{$value.participants}}人已参加</div>
+    {{/each}}
+    <div class="title-line">
+        
+    </div>
+</div>

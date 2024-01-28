@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已结束课程</title>
+</head>
+
+<body>
+<div class="page">
+<!-- 头部 -->
+<header id="details-header" class="header-layout">
+    {{include '../../components/header2/header.art'}}
+</header>
+<!--内容-->
+<div class="c1">
+<div class="c1-1">
+<img src="./components/c1.png" class="i1">
+<p class="t1">c语言程序基础</p>
+</div>
+<p class="t1-1">高禹</p>
+</div>
+<div class="c2">
+<div class="c2-2">
+    <img src="./components/2.jpg" class="i1">
+    <p class="t1">数据结构</p>  
+</div>
+<p class="t1-1">曾鸣</p>
+</div>
+</div>
+</div>
+</body>
+</html>

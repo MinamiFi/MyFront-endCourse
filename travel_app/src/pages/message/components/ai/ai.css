@@ -1,0 +1,46 @@
+.ai {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 5px;
+    /* background-color: rgba(0, 128, 0, 0.5); */
+}
+
+.ai-item {
+    position: relative;
+    padding-left: 10px ;
+    /* left:10px; */
+    width: 100%;
+    margin-bottom:1px;
+    background-color: rgb(254, 254, 254);
+}
+
+.ai-link {
+    flex-direction: column;
+    color: #999;
+}
+
+#ai-icons {
+    float: left;
+    font-size: 50px;
+    margin-bottom: 5.5px;
+}
+
+.ai-text{
+    position: absolute;
+    float: left;
+    font-size: 20px;
+    top: 25%;
+    padding-left: 10px;
+}
+.ai-div{
+    display: flex;
+    float: left;
+    font-size: 20px;
+    width: 300px;
+    height: 100%;
+}
+.ai-span{
+    margin: auto;
+    justify-self: center;
+}

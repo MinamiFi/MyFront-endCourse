@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "icon":"icon-zitidaima",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/1.png",
+            "text": "计算机"
+        },
+        {
+            "icon":"icon-gongxue",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/2.png",
+            "text": "工学"
+        },
+        {
+            "icon":"icon-lixue",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/3.png",
+            "text": "理学"
+        },
+        {
+            "icon":"icon-xinlixue",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/4.png",
+            "text": "心理学"
+        },
+        {
+            "icon":"icon-waiyu",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/5.png",
+            "text": "外语"
+        },
+        {
+            "icon":"icon-kaoyan",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/6.png",
+            "text": "考研"
+        },
+        {
+            "icon":"icon-wenxue",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/7.png",
+            "text": "文学"
+        },
+        {
+            "icon":"icon-shenglve",
+            "url": "http:\/\/alimc.img.imooc.com\/class\/muyun\/mall-wepApp\/index\/mainNav\/8.png",
+            "text": "全部"
+        }
+    ]
+}

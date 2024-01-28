@@ -1,0 +1,40 @@
+.introduction {
+    margin-top: 10px;
+    width: 100%;
+    height: 650px;
+    position: relative;
+}
+
+.introduction-title {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 25px;
+}
+
+.introduction-content {
+    width: 90%;
+    left: 5%;
+    position: absolute;
+    top: 50px;
+    height: 400px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 14px;
+    /*控制文本行数*/
+    -webkit-box-orient: vertical;
+    /*设置文本的排列方向:垂直*/
+    white-space: normal;
+    /*控制空白符，连续的空白符会被合并，换行符会被当作空白符来处理*/
+}
+
+.introduction-line{
+    position: absolute;
+    top: 630px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color:rgba(200,200, 200,0.8);
+
+}

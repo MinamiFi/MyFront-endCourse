@@ -1,0 +1,12 @@
+#details-header-jiantou{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 20px;
+}
+#details-header-zhuanfa{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+}

@@ -1,0 +1,170 @@
+.background{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(222, 217, 217)
+}
+.nav{
+    width: 100%;
+    height: 8%;
+   background-color:whitesmoke
+}
+.wz {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.daiban{
+    margin-top: 10px;
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.db{
+    position: absolute;
+    margin-top: 13px;
+}
+.kc{
+    position: absolute;
+    margin-top: 16px;
+}
+.bjb{
+    position: absolute;
+    margin-top: 16px;
+}
+.yp{
+    position: absolute;
+    margin-top: 16px;
+}
+.xz{
+    position: absolute;
+    margin-top: 16px;
+}
+.sj{
+    position: absolute;
+    margin-top: 16px;
+}
+.sz{
+    position: absolute;
+    margin-top: 16px;
+}
+.nm{
+    position: absolute;
+    margin-top: 16px;
+}
+
+/*.mine-list{
+    position: relative;
+}*/
+
+.name{
+    
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.kecheng{
+    margin-top: 10px;
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.bijiben{
+    
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.yunpan{
+    
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.xiaozu{
+    
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.shujia{
+    
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.shezhi{
+    margin-top: 10px;
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.icon-wode0{
+    position: relative;
+    top: 11px;
+    color: aqua;
+    font-size: 40px;
+}
+.icon-daiban0{
+    position: relative;
+    top: 11px;
+    color:chartreuse;
+    font-size: 40px;
+}
+.icon-kecheng0{
+    position: relative;
+    top: 11px;
+    color: firebrick;
+    font-size: 40px;
+}
+.icon-noun__cc0{
+    position: relative;
+    top: 14px;
+    color:chartreuse;
+    font-size: 45px;
+}
+.icon-yunyunpan0{
+    position: relative;
+    top: 11px;
+    color: blue;
+    font-size: 40px;
+}
+.icon-xiaozu0{
+    position: relative;
+    top: 11px;
+    color: darkred;
+    font-size: 40px;
+}
+.icon-shujia0{
+    position: relative;
+    top: 11px;
+    color: coral;
+    font-size: 40px;
+}
+.icon-shezhi0{
+    position: relative;
+    top: 11px;
+    color: darkgray;
+    font-size: 40px;
+}
+.icon-xiangyoujiantou0{
+    position: absolute;
+    top: 15px;
+    right: 11px;
+    color: lightgray;
+    font-size: 30px;
+
+}

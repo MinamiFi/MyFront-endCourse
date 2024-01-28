@@ -1,0 +1,7 @@
+<div class="surface">
+    {{each surfacedata}}
+    <p class="surface-pic">
+        <img src="{{$value.url}}" alt="" class="surface-img">
+    </p>
+    {{/each}}
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="nav">
+            <p class="wz">设置</p>
+            <a href="./mine.html">  <i class="iconfont icon-jiantou icon-jiantou0"></i></a>
+        </div>
+        <div class="wujianju">
+           <span class="content">账号管理</span>   
+        </div>
+        <div class="youjianju">
+           <span class="content"> 消息设置</span>   
+        </div>
+        <div class="wujianju">
+            <span class="content"> 通用设置</span>   
+        </div>
+        <div class="yinsi">
+            隐私
+        </div>
+        <div class="wujianju">
+            <span class="content"> 个性化推荐</span> 
+            <i class="iconfont icon-kaiguan icon-kaiguan0"></i>  
+        </div>
+        <div class="wujianju">
+            <span class="content"> 隐私政策</span>   
+        </div>
+        <div class="wujianju">
+            <span class="content"> 用户协议</span>   
+        </div>
+        <div class="wujianju">
+            <span class="content"> 个人信息收集清单</span>   
+        </div>
+        <div class="wujianju">
+            <span class="content"> 第三方信息共享清单</span>   
+        </div>
+        <div class="youjianju">
+            <span class="content"> 帮助中心</span>   
+        </div>
+        <div class="wujianju">
+            <span class="content"> 关于</span>   
+        </div>
+        <div class="qhzh">
+            <span class="content0">切换账号</span>   
+        </div>
+        <div class="tcdl">
+            <span class="content1"> 退出登录</span>   
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<div class="jieshu">
+       <a href="./endcourse.html" class="a-1">
+        <img src="../img/事件完成、通过.png" class="i12">
+        <p class="t1">
+          已结束课程
+        </p>
+        <img src="../img/箭头.png" class="i2">
+       </a>
+</div>
+

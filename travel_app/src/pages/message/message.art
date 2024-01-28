@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消息</title>
+</head>
+
+<body>
+    <div id="message-page" class="message-layout page">
+        <!-- 头部 -->
+        <header class="header3-layout">
+        {{include '../../components/header3/header.art'}}
+        </header>
+        <div id="message-ai" class="ai-layout">
+            {{include './components/ai/ai.art'}}
+        </div>
+
+        <div id="message-chat" class="chat-layout">
+            {{include './components/chat/chat.art'}}
+        </div>
+
+        <div id="message-tabbar" class="tabbar-layout">
+            <% include('../../components/tabbar/tabbar.art',{active:'message'})%>
+        </div>
+
+        <!-- 返回顶部 -->
+        <div class="backtop-layout">
+            {{include '../../components/backtop/backtop.art'}}
+        </div>
+    </div>
+</body>
+
+</html>

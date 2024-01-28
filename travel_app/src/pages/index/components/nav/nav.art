@@ -1,0 +1,10 @@
+<ul class="nav">
+    {{each navs}}
+    <li class="nav-item">
+        <a href="./classification.html" class="nav-link">
+            <i id="nav-icons" class="iconfont {{$value.icon}}"></i>
+            <span>{{$value.text}}</span>
+        </a>
+    </li>
+    {{/each}}
+</ul>

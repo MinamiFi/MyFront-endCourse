@@ -1,0 +1,52 @@
+.chat {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 5px;
+    /* background-color: rgba(0, 128, 0, 0.5); */
+}
+
+.chat-item {
+    position: relative;
+    padding-left: 10px;
+    /* left:10px; */
+    padding-top: 10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    margin-bottom: 1px;
+    background-color: rgb(254, 254, 254);
+}
+
+.chat-link {
+    flex-direction: column;
+    color: #999;
+    display: contents;
+}
+
+#chat-icons {
+    float: left;
+    font-size: 50px;
+    margin-bottom: 5.5px;
+}
+
+.chat-text {
+    position: absolute;
+    float: left;
+    font-size: 20px;
+    top: 25%;
+    padding-left: 10px;
+}
+
+.chat-div {
+    display: flex;
+    float: left;
+    font-size: 20px;
+    width: 486px;
+    height: 100%;
+}
+
+.chat-span {
+    margin: auto;
+    justify-self: center;
+}

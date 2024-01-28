@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="nav">
+            <p class="wz">我</p>
+        </div>
+        <div class="name mine-list">
+            <i class="iconfont icon-wode icon-wode0"></i>&nbsp;&nbsp;&nbsp;<span class="nm">NAME</span><i
+                class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i>
+        </div>
+        <div class="daiban mine-list">
+            <i class="iconfont icon-daiban icon-daiban0"></i>&nbsp;&nbsp;&nbsp;<span class="db">待办</span><i
+                class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i>
+        </div>
+        <div class="kecheng mine-list">
+            <i class="iconfont icon-kecheng icon-kecheng0"></i>&nbsp;&nbsp;&nbsp;<span class="kc">课程</span><i
+                class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i>
+        </div>
+        <div class="bijiben mine-list">
+            <i class="iconfont icon-noun__cc icon-noun__cc0"></i>&nbsp;&nbsp;&nbsp;<span class="bjb">笔记本</span>
+            <a href="./minenotes.html" ><i class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i></a>
+        </div>
+        <div class="yunpan mine-list">
+            <i class="iconfont icon-yunyunpan icon-yunyunpan0"></i>&nbsp;&nbsp;&nbsp;<span class="yp">云盘</span><i
+                class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i>
+        </div>
+        <div class="xiaozu mine-list">
+            <i class="iconfont icon-xiaozu icon-xiaozu0"></i>&nbsp;&nbsp;&nbsp;<span class="xz">小组</span><i
+                class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i>
+        </div>
+        <div class="shujia mine-list">
+            <i class="iconfont icon-shujia icon-shujia0"></i>&nbsp;&nbsp;&nbsp;<span class="sj">书架</span>
+          <i class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i> 
+        </div>
+        <div class="shezhi mine-list">
+            <i class="iconfont icon-shezhi icon-shezhi0"></i>&nbsp;&nbsp;&nbsp;<span class="sz">设置</span>
+            <a href="./settings.html">  <i class="iconfont icon-xiangyoujiantou icon-xiangyoujiantou0"></i></a>
+        </div>
+        <div id="index-tabbar" class="tabbar-layout">
+            <% include('../../components/tabbar/tabbar.art',{active:'mine'})%>
+        </div>
+    </div>
+</body>
+
+</html>

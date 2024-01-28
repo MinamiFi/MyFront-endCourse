@@ -1,0 +1,9 @@
+<div class="header">
+    <div class="searchbox">
+        <from class="searchbox-form">
+            <input type="text" class="searchbox-input" name="words" autocomplete="off"
+                placeholder="{{placeholder?placeholder:'搜索课程/关键字'}}">
+            <i id="header-sousuo" class="iconfont icon-sousuo"></i>
+        </from>
+    </div>
+</div>

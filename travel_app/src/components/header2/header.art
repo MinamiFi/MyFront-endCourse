@@ -1,0 +1,6 @@
+<div class="header">
+    <a href="javascript:history.go(-1);">
+        <i class="iconfont icon-jiantou" id="details-header-jiantou"></i>
+    </a>
+    <i class="iconfont icon-31zhuanfa" id="details-header-zhuanfa"></i>
+</div>

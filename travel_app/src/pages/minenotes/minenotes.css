@@ -1,0 +1,93 @@
+.background{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(222, 217, 217)
+}
+.nav{
+    width: 100%;
+    height: 8%;
+   background-color:whitesmoke
+}
+.wz {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.header-layout {
+   
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 54px;
+
+    
+}
+.mine-list{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
+.cgx{
+    position: absolute;
+    margin-top: 16px;
+}
+.ktbj{
+    position: absolute;
+    margin-top: 16px;
+}
+.gkbj{
+    position: absolute;
+    margin-top: 16px;
+}
+.grbj{
+    position: absolute;
+    margin-top: 16px;
+}
+.icon-caogaoxiang0{
+    position: relative;
+    top: 11px;
+    color: rgb(55, 55, 159);
+    font-size: 40px;
+}
+.icon-wenjianjia0{
+    position: relative;
+    top: 11px;
+    color: rgb(55, 55, 159);
+    font-size: 40px;
+}
+.icon-24gf-folderPlus0{
+    position: relative;
+    top: 11px;
+    color: rgb(55, 55, 159);
+    font-size: 40px;
+}
+.icon-wenjianjia0{
+    position: relative;
+    top: 11px;
+    color: rgb(55, 55, 159);
+    font-size: 40px;
+}
+.xiaozi{
+    position: relative;
+    top: 5px;
+    left: 62px;
+    font-size: 15px;
+    color: gray;
+}
+.icon-jiantou0{
+    position: relative;
+    top:0px;
+    left: 0px;
+    color: lightgray;
+    font-size: 30px;
+
+}

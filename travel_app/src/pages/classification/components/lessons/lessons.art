@@ -1,0 +1,12 @@
+<div class="lessons">
+    <div id="lessons-list" class="lessons-list">
+        {{each lessonsdata}}
+        <div class="lessons-item">
+            <img src="{{$value.url}}" alt="" class="lessons-img">
+            <div class="lessons-title">
+                {{$value.title}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

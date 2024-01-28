@@ -1,0 +1,7 @@
+<div class="summary">
+    <h2 class="summary-title">课程大纲</h2>
+    {{each summarydata}}
+    <h3 class="summary-name">{{$value.name}}</h3>
+    <div class="summary-content">{{$value.content}}</div>
+    {{/each}}
+</div>

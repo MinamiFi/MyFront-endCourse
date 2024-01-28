@@ -1,0 +1,9 @@
+<div class="introduction">
+    <h2 class="introduction-title">课程概述</h2>
+    {{each introductiondata}}
+    <div class="introduction-content">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$value.content}}
+    </div>
+    {{/each}}
+    <div class="introduction-line"></div>
+</div>

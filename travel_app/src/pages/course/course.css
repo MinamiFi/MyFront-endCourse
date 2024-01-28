@@ -1,0 +1,15 @@
+.course-layout {
+    overflow-y: auto;
+    height: 100%;
+    /* background-color: red; */
+}
+.xuanze-layout {
+    background-color: rgb(243, 243, 243);
+}
+.tuike-layout {
+    background-color: rgb(243, 243, 243);
+}
+
+.jieshu-layout {
+    background-color: rgb(243, 243, 243);
+}

@@ -1,0 +1,37 @@
+.details-layout {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.surface-layout {
+    margin-top: 54px;
+}
+
+.surface-layout,
+.title-layout,
+.introduction-layout,
+.summary-layout {
+    /* background-color: #123456; */
+    position: relative;
+}
+
+.title-layout {
+    height: 100px;
+}
+
+#details-tabbar {
+    background-color: #fff;
+}
+
+.tabbar-box {
+    width: 90%;
+    height: 80%;
+    margin-top: 1%;
+    margin-left: 5%;
+    background-color: rgb(30, 158, 30);
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}

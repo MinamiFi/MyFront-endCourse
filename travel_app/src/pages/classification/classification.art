@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程分类页</title>
+</head>
+
+<body>
+    <div id="classification-page" class="classification-layout page">
+        <!-- 头部 -->
+        <header id="classification-header" class="header-layout">
+            {{include '../../components/header2/header.art'}}
+        </header>
+
+        <!-- 左边的导航 -->
+        <div id="classification-navi" class="navi-layout">
+            {{include './components/navi/navi.art'}}
+        </div>
+
+        <!-- 课程 -->
+        <div id="classification-lessons" class="lessons-layout">
+            {{include './components/lessons/lessons.art'}}
+        </div>
+        <!-- 返回顶部 -->
+        <div class="backtop-layout">
+            {{include '../../components/backtop/backtop.art'}}
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>聊天界面</title>
+</head>
+<body>
+	<div id="message-page" class="message-layout">
+		<div class="header4-layout">
+			{{include '../../components/header4/header.art'}}
+		</div>
+		<div class="container">
+			<div class="chat-area">
+				<div class="message received">
+					<div class="message-name">老师</div>
+					<div class="message-text">
+						你好，需要什么帮助吗？
+						<div class="message-time">12:35 PM</div>
+					</div>
+				</div>
+				<div class="message sent">
+					<div class="message-text">
+						是的，我需要。
+						<div class="message-time">12:34 PM</div>
+					</div>
+				</div>
+				<!-- more chat messages here -->
+			</div>
+			<div class="input-area">
+				<input type="text" class="input-field" placeholder="Type your message...">
+				<button class="send-button" onclick="sendMessage()">Send</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		function sendMessage() {
+			// 获取输入框的文本内容
+			var inputField = document.querySelector('.input-field');
+			var messageText = inputField.value.trim();
+			
+			if (messageText !== '') {
+				// 在聊天区域中添加发送的消息
+				var chatArea = document.querySelector('.chat-area');
+				var sentMessage = document.createElement('div');
+				sentMessage.classList.add('message', 'sent');
+				var messageTextElement = document.createElement('div');
+				messageTextElement.classList.add('message-text');
+				messageTextElement.textContent = messageText;
+				var messageTimeElement = document.createElement('div');
+				messageTimeElement.classList.add('message-time');
+				messageTimeElement.textContent = getCurrentTime();
+				messageTextElement.appendChild(messageTimeElement);
+				sentMessage.appendChild(messageTextElement);
+				chatArea.appendChild(sentMessage);
+
+				// 清空输入框
+				inputField.value = '';
+			}
+		}
+
+		function getCurrentTime() {
+			// 获取当前时间并格式化
+			var now = new Date();
+			var hours = now.getHours().toString().padStart(2, '0');
+			var minutes = now.getMinutes().toString().padStart(2, '0');
+			return hours + ':' + minutes;
+		}
+	</script>
+</body>
+</html>

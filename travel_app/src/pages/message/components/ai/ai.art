@@ -1,0 +1,12 @@
+<ul class="ai">
+    {{each ais}}
+    <li class="ai-item">
+        <a href="./chatting.html" class="ai-link">
+            <i id="ai-icons" class="iconfont {{$value.icon}}"></i>
+            <div class="ai-div">
+                <span class="ai-span">{{$value.text}}</span>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</ul>

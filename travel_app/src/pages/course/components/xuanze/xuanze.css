@@ -1,0 +1,45 @@
+.c-1{
+    background-color: white;
+    width: 89.33%;
+    margin: auto; 
+    margin-top: 80px;
+    height: 165px;
+    border-radius:20px 20px 20px 20px;
+}
+.c-11{
+    display: flex;
+    height: 110px;
+    width: 100%;
+}
+.i13{
+    width: 120px;
+    height: 80px;
+    margin-top: 20px;
+}
+.t11{
+    margin-top: 20px;
+    margin-left: 4%;
+    font-size: 25px;
+} 
+.t11--1{
+    margin-left:12.5%;
+    margin-top:0px;
+}
+.t11--2{
+    margin-left:12.5%;
+    margin-top:0px;
+}
+
+.i2{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+.c-2{
+    background-color: white;
+    width: 89.33%;
+    margin: auto; 
+    margin-top: 30px;
+    height: 165px;
+    border-radius:20px 20px 20px 20px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已退课课程</title>
+</head>
+
+<body>
+<div class="page">
+    <!-- 头部 -->
+<header id="details-header" class="header-layout">
+    {{include '../../components/header2/header.art'}}
+</header>
+<div class="error">
+    暂无数据
+</div>
+</div>
+</body>
+</html>

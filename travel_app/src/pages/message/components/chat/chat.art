@@ -1,0 +1,12 @@
+<ul class="chat">
+    {{each chats}}
+    <li class="chat-item">
+        <a href="./chatting.html" class="chat-link">
+            <i id="chat-icons" class="iconfont {{$value.icon}}"></i>
+            <div class="chat-div">
+                <span class="chat-span">{{$value.text}}</span>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</ul>

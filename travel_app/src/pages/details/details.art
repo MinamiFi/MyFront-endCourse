@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程详细</title>
+</head>
+
+<body>
+    <div id="details-page" class="details-layout page">
+        <!-- 头部 -->
+        <header id="details-header" class="header-layout">
+            {{include '../../components/header2/header.art'}}
+        </header>
+
+        <!-- 预览图 -->
+        <div id="details-surface" class="surface-layout">
+            {{include './components/surface/surface.art'}}
+        </div>
+
+        <!-- 课程标题栏 -->
+        <div id="details-title" class="title-layout">
+            {{include './components/title/title.art'}}
+
+        </div>
+
+        <!-- 课程介绍 -->
+        <div id="details-introduction" class="introduction-layout">
+            {{include './components/introduction/introduction.art'}}
+        </div>
+
+        <!-- 课程大纲 -->
+        <div id="details-summary" class="summary-layout">
+            {{include './components/summary/summary.art'}}
+        </div>
+
+        <!-- 我要报名 -->
+        <div id="details-tabbar" class="tabbar-layout">
+            <a>
+                <div class="tabbar-box">
+                    立即参加
+                </div>
+            </a>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="backtop-layout">
+            {{include '../../components/backtop/backtop.art'}}
+        </div>
+    </div>
+</body>
+
+</html>

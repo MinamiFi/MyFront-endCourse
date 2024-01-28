@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程</title>
+</head>
+
+<body>
+    <div id="course-page" class="course-layout page">
+        <!-- 头部 -->
+        <header class="header-layout">
+            {{include '../../components/header/header.art'}}
+        </header>
+        <!--已选择课程-->
+        <div class="xuanze-layout">
+            {{include './components/xuanze/xuanze.art'}}
+        </div>
+        <!--已退课课程-->
+        <div class="tuike-layout">
+            {{include './components/tuike/tuike.art'}}
+        </div>
+        <!--已结束课程-->
+        <div class="jieshu-layout">
+            {{include './components/jieshu/jieshu.art'}}
+        </div>
+        <!-- 标签栏 -->
+        <div id="index-tabbar" class="tabbar-layout">
+            <% include('../../components/tabbar/tabbar.art',{active:'course'})%>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="backtop-layout">
+            {{include '../../components/backtop/backtop.art'}}
+        </div>
+    </div>
+</body>
+</html>
