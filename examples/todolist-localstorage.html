@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+
+<body>
+    <div id="todo">
+        <h1>Todolist</h1>
+        <input type="text" id="inputitem" placeholder="请输入事项">
+        <input type="button" id="btn" value="添加">
+
+    </div>
+    <ul id="todolist">
+
+    </ul>
+    <script>
+        //定义添加子元素函数 
+        function addChildNode(parent, child, content) {
+            var getPraent = document.getElementById(parent)
+            var newNode = document.createElement(child)
+            getPraent.appendChild(newNode)
+            newNode.innerHTML = content
+        }
+        // 页面加载时，从localStorage读取内容到页面上
+        window.onload=function(){            
+            var lStorage=localStorage
+            console.log('页面已加载')
+            console.log(lStorage)            
+           
+            for(var i=0;i<lStorage.length;i++){
+                var getNewItem=localStorage.getItem(lStorage.key(i))                                
+                addChildNode('todolist', 'li', getNewItem)
+            }           
+        }
+
+        //主程序开始
+        var getItem = document.getElementById('inputitem')
+        var getBtn = document.getElementById('btn')
+        //将新增的元素内容存在localStorage中
+        var itemIndex=0;        
+        getBtn.onclick = function () {
+            var newItem = getItem.value            
+            localStorage.setItem(newItem+[itemIndex],newItem)            
+            // var getNewItem=localStorage.getItem('arrStorage'+[itemIndex])
+            addChildNode('todolist', 'li', newItem)
+            itemIndex++;
+        }
+        //改变输入框的背景色
+        getItem.onfocus = function () {
+            getItem.style.backgroundColor = 'lightgray'
+
+        }
+        getItem.onblur = function () {
+            getItem.style.backgroundColor = 'white'
+        }
+
+        // 事件监听
+        var lineThrough = false;
+        function processInnderDiv(domP) {
+            domP.style.display = 'none'
+            // console.log(domP.innerHTML)
+            var lStorage=localStorage
+            console.log(lStorage)
+            for(var i=0;i<lStorage.length;i++){
+                var getItem=localStorage.getItem(lStorage.key(i))
+                console.log(getItem)
+                if(getItem==domP.innerHTML){
+                    console.log(lStorage.key(i))
+                    localStorage.removeItem(lStorage.key(i))
+
+                }
+            }            
+           // 添加删划线         
+            // if (!lineThrough) {
+            //     domP.style.textDecoration = 'line-through';
+            //     lineThrough = true;
+            // } else {
+            //     domP.style.textDecoration = 'none';
+            //     lineThrough = false;
+            // }
+        }
+
+        //addEventListener事件添加新项
+        document.getElementById('todolist').addEventListener("click", function (event) {
+            processInnderDiv(event.target);
+            // console.log(event.target)
+            // console.log(event)
+            // console.log(event.)
+        }, false);
+
+        //onclick事件添加新项
+        // document.getElementById('todolist').onclick=function(event){
+        //     processInnderDiv(event.target);
+
+        // }
+
+        //按回车键添加新项
+
+        document.getElementById('inputitem').onkeydown = function (event) {
+
+            var e = event || window.event;
+            if (e&&e.keyCode == 13) { //回车键的键值为13
+                var newItem = getItem.value
+                addChildNode('todolist', 'li', newItem)
+
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

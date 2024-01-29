@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    <style>
+        #box {
+            width: 650px;
+            margin: auto;
+            height: 392px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        ul {
+            width: 5000px;
+            height: 360px;
+            position: relative;
+            padding: 0%;
+            list-style: none;
+            display: flex;
+            transition: left 1s linear 0s;
+            left: 0px;
+        }
+
+        #box ul li {
+            float: left;
+        }
+
+        li img {
+            width: 650px;
+            height: 360px;
+        }
+
+        .leftArrow {
+            position: absolute;
+            left: 10px;
+            top: 160px;
+        }
+
+        .rightArrow {
+            position: absolute;
+            right: 10px;
+            top: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="ul">
+            <li><img src="./images/beijing/0.jpg" alt=""></li>
+            <li><img src="./images/beijing/1.jpg" alt=""></li>
+            <li><img src="./images/beijing/2.jpg" alt=""></li>
+            <li><img src="./images/beijing/3.jpg" alt=""></li>
+            <li><img src="./images/beijing/4.jpg" alt=""></li>
+        </ul>
+        <div class="leftArrow"><img src="./images/左箭头.png" alt=""></div>
+        <div class="rightArrow"><img src="./images/右箭头.png" alt=""></div>
+
+    </div>
+
+    <script>
+        var left = 0;
+        var leftArrow = document.getElementsByClassName("leftArrow")[0]
+        var rightArrow = document.getElementsByClassName("rightArrow")[0]
+        var ul = document.getElementById("ul")
+
+        //函数节流
+        var lock1 = true
+        var lock2 = true
+
+        //左移
+        function leftmove() {
+            if (!lock1)
+                return;
+            lock1 = false;
+            setTimeout(function () {
+                lock1 = true;
+            }, 1000)
+            if (left > -(2600)) {
+                ul.style.transition = 'left 1s linear 0s'
+                left -= 650;
+            }
+            else {
+                left = 0;
+                ul.style.transition = 'none'
+            }
+            ul.style.left = left + 'px';
+        }
+
+        //右移
+        function rightmove() {
+            if (!lock2)
+                return;
+            lock2 = false;
+            setTimeout(function () {
+                lock2 = true;
+            }, 1000)
+            if (left < 0) {
+                left += 650;
+                ul.style.transition = 'left 1s linear 0s'
+            }
+            else {
+                ul.style.transition = 'none'
+                left = -2600;
+            }
+            ul.style.left = left + 'px';
+        }
+
+        //左箭头
+        leftArrow.onclick = function () {
+            leftmove();
+        }
+        //右箭头
+        rightArrow.onclick = function () {
+            rightmove();
+        }
+
+        //自动轮播
+        setInterval(function () { leftmove() }, 5000);
+
+    </script>
+</body>
+
+</html>
