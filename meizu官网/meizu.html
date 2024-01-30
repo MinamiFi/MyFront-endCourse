@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魅族官网商城-提供魅族品牌手机、数码生活周边及子品牌产品的预约和购买</title>
+    <link rel="icon" href="./img/meizu-favicon.ico">
+    <style type="text/css">
+        .header {
+            position: relative;
+            width: 100%;
+            /* display: flex; */
+            /* width: 1240px; */
+        }
+
+        #header-nav {
+            display: flex;
+            justify-content: space-around;
+            /* background-color: gray; */
+            width: 1240px;
+            left: 30px;
+            position: absolute;
+            color: white;
+        }
+
+        .head-nav-item {
+            font-size: 14px;
+            margin-right: 30px;
+            line-height: 70px;
+            cursor: pointer;
+        }
+
+        #header-nav:hover+#hover-wrap {
+            height: 200px;
+        }
+
+        #hover-wrap:hover{
+            height: 200px;
+        }
+
+        #hover-wrap {
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 82px;
+            background-color: #fff;
+            width: 100%;
+            overflow: hidden;
+            transition: height 100ms;
+            height: 0;
+        }
+
+        .hover-item {
+            margin-top: 10px;
+            width: 150px;
+        }
+
+        .hover-title {
+            font-size: 12px;
+            width: 142px;
+            color: #333;
+            padding: 0;
+            cursor: pointer;
+            position: relative;
+            z-index: 99;
+        }
+
+        .hover-price {
+            font-size: 10px;
+        }
+
+        .head-nav-item-2 {
+            /* background-color: gold; */
+            display: flex;
+        }
+
+        .head-nav-item-1 {
+            line-height: 21px;
+            margin-right: 5px;
+            line-height: 100px;
+        }
+
+        .banner1 {
+            width: 100%;
+
+        }
+
+        #banner1-img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #meizu {
+            margin-top: 20px;
+        }
+
+        #userlogin {
+            margin-right: 1px;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        .head-nav-item:hover {
+            color: #ff6700;
+        }
+
+        #user-part {
+            display: flex;
+            width: 2px;
+        }
+
+        .search {
+            margin-top: 20px;
+        }
+
+        #searchbox {
+            border-radius: 30px;
+            border: 0px;
+            height: 30px;
+            width: 150px;
+        }
+
+        .underheader {
+            /* display: flex; */
+            /* margin: 0 auto; */
+            width: 100%;
+        }
+
+        #nav2 {
+            margin: 0 auto;
+            display: flex;
+            width: 1240px;
+            justify-content: space-around;
+        }
+
+        .title-pic {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav2-title2 {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .phone-part {
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        #phone-title {
+            padding-top: 50px;
+            margin-bottom: 10px;
+            /* font-size: 1em; */
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #phone-banner {
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        #phone-banner:hover {
+            opacity: .85;
+        }
+
+        #phone-img {
+            width: 1240px;
+        }
+
+        #phone-info {
+            display: flex;
+            justify-content: space-around;
+            width: 1240px;
+            margin: 0 auto;
+            height: 610px;
+            /* background-color: red; */
+        }
+
+        .phone-info-item {
+            width: 610px;
+            height: 610px;
+            background-color: #fff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .phone-info-logo {
+            background-image: linear-gradient(120deg, #ff3149, #ff64a6);
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            display: block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .phone-info-title {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 0;
+            margin-top: 60px;
+        }
+
+        .phone-info-explain {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 3px;
+            margin-top: 5px;
+        }
+
+        .phone-info-price {
+            position: relative;
+            color: #c00;
+            font-size: 22px;
+        }
+
+        .explore-part {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #explore-title {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 0;
+            padding-top: 60px;
+        }
+
+        #explore-banner {
+            margin-top: 20px;
+            margin-left: -500px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        #explore-banner:hover {
+            opacity: .85;
+        }
+
+        #explore-good {
+            width: 1240px;
+            margin: 0 auto;
+        }
+
+        .good-wrap {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .good-wrap-left {
+            width: 303px;
+            height: 375px;
+            position: relative;
+        }
+
+        .good-left-img {
+            width: 303px;
+            cursor: pointer;
+        }
+
+        .good-left-word {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            text-align: center;
+        }
+
+        .good-left-title {
+            color: #fff;
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        .good-left-explain {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .good-left-price {
+            margin-top: 5px;
+            color: #ebce6b;
+            font-weight: 700;
+        }
+
+        .good-item {
+            width: 303px;
+            height: 375px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .good-item-img {
+            margin-top: 30px;
+        }
+
+        .good-item-title {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .good-item-explain {
+            color: #999;
+            margin-top: 10px;
+            font-size: 13.5px;
+        }
+
+        .good-item-price {
+            position: relative;
+            color: #c00;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .section-part {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding-bottom: 20px;
+        }
+
+        #section-title {
+            padding-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section-wrap {
+            display: flex;
+            width: 1240px;
+            margin: 0 auto;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-top: 10px;
+        }
+
+        .section-item {
+            width: 303px;
+            height: 400px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .section-img {
+            width: 303px;
+        }
+
+        .section-user-info {
+            display: flex;
+            height: 42px;
+        }
+
+        .section-user-name {
+            font-size: 15px;
+            line-height: 30px;
+            margin-left: 15px;
+            text-align: left;
+            float: left;
+            color: #515151;
+        }
+
+        .section-user-img {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 1px 1px #eee;
+        }
+
+        .section-content {
+            color: #515151;
+            padding: 10px 15px 15px;
+            font-size: 16px;
+            line-height: 27px;
+            text-align: left;
+        }
+
+        .comment-tip {
+            color: #999;
+            display: block;
+            padding: 0 15px;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .flyme-part,
+        .video-part {
+            padding-top: 10px;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding-bottom: 20px;
+        }
+
+        #flyme-title,
+        #video-title {
+            font-size: 30px;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .flyme-wrap,
+        .video-wrap {
+            padding-top: 10px;
+            margin-top: 20px;
+            display: flex;
+            height: 245px;
+            width: 1240px;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .video-part {
+            padding-bottom: 50px;
+        }
+
+        .flyme-img {
+            height: 245px;
+        }
+
+        .flyme-item,
+        .video-item {
+            width: 303px;
+            height: 245px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .flyme-item-img,
+        .video-img {
+            width: 303px;
+            height: 190px;
+        }
+
+        .flyme-item-title,
+        .video-info {
+            font-size: 16px;
+            line-height: 55px;
+            margin-top: -5px;
+            color: #515151;
+        }
+
+        #footer-wrap {
+            overflow: hidden;
+            width: 1240px;
+            height: 244.5px;
+            margin: 0 auto;
+            white-space: nowrap;
+            display: flex;
+            padding-top: 38px;
+            margin-bottom: 58px;
+            justify-content: space-between;
+            /* background-color: wheat; */
+        }
+
+        #recommend-contain {
+            height: 244.5px;
+            display: flex;
+            width: 936px;
+            /* background-color: slateblue; */
+        }
+
+        .recommend-wrap {
+            width: 164px;
+        }
+
+        .recommend-title {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .recommend-content {
+            font-size: 13px;
+            color: #737880;
+            margin-bottom: 16px;
+        }
+
+        .recommend-content:hover {
+            color: #ff4132;
+        }
+
+        #kefu-title {
+            font-size: 15px;
+            color: #3d3e40;
+            margin-bottom: 16px;
+        }
+
+        #kefu-contact {
+            width: 304px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        #kefu-phone {
+            font-size: 18px;
+            color: #3d3e40;
+        }
+
+        #kefu-time {
+            font-size: 13px;
+            color: #737880;
+        }
+
+        #kefu-contact-btn {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: #ff4132;
+            border-radius: 100px;
+            font-size: 15px;
+            line-height: 15px;
+            height: 25px;
+            color: #fff;
+            transition: all .2s ease;
+        }
+
+        #kefu-btn-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        #sub-title {
+            font-size: 15px;
+            color: #3d3e40;
+            margin-bottom: 15px;
+        }
+
+        .sub-img {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+        }
+
+        #bottom-link {
+            color: #fff;
+            height: 66px;
+            width: 100%;
+            background-color: #000;
+            font-size: 13px;
+        }
+
+        #link-wrap {
+            width: 1240px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #link-policy {
+            width: 796px;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        #link-right {
+            display: flex;
+        }
+
+        #link-right-code {
+            line-height: 66px;
+        }
+
+        #lang {
+            display: flex;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+
+        #lang-img {
+            width: 16px;
+            height: 16px;
+        }
+
+        #lang-word {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div id="header-nav">
+            <div id="meizu">
+                <img src="img/logo.png" alt="meizu" width="160px">
+            </div>
+            <div class="head-nav-item-2">
+                <div class="head-nav-item">手机</div>
+                <div class="head-nav-item">PANDAER</div>
+                <div class="head-nav-item">lipro</div>
+                <div class="head-nav-item">配件</div>
+                <div class="head-nav-item">Flyme</div>
+                <div class="head-nav-item">服务</div>
+                <div class="head-nav-item">社区</div>
+                <div class="head-nav-item">集团官网</div>
+                <div class="head-nav-item">APP下载</div>
+            </div>
+            <div id="user-part">
+                <div class="search">
+                    <input type="text" value="&nbsp&nbsp魅族 20" id="searchbox">
+                </div>
+
+                <div class="head-nav-item-1" id="userlogin">
+                    <img src="./img/人.png" alt="userlogin" width="60px">
+                </div>
+                <div class="head-nav-item-1" id="shopcar">
+                    <img src="img/购物车.png" alt="shopcar" width="55px">
+                </div>
+
+            </div>
+        </div>
+        <div id="hover-wrap">
+            <div class="hover-item">
+                <img class="hover-img" src="./img/hover1.jpg" alt="" width="120px">
+                <div class="hover-title">
+                    魅族 20
+                </div>
+                <div class="hover-price">
+                    ￥2999
+                </div>
+            </div>
+            <div class="hover-item">
+                <img class="hover-img" src="./img/hover2.jpg" alt="" width="120px">
+                <div class="hover-title">
+                    魅族 20 PRO
+                </div>
+                <div class="hover-price">
+                    ￥3999
+                </div>
+            </div>
+            <div class="hover-item">
+                <img class="hover-img" src="./img/hover3.jpg" alt="" width="120px">
+                <div class="hover-title">
+                    魅族 20 INFINITY 无界版
+                </div>
+                <div class="hover-price">
+                    ￥6299
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="banner1">
+            <img src="./img/banner.jpg" alt="banner" id="banner1-img">
+        </div>
+    </div>
+
+    <div class="underheader">
+        <div id="nav2">
+            <div class="title-pic">
+                <img alt="meizushucu" src="img/魅族暑促季.png" width="130px">
+                <div class="nav2-title1">
+                    魅族暑促季
+                </div>
+                <div class="nav2-title2">
+                    购机享多重权益
+                </div>
+            </div>
+            <div class="title-pic">
+                <img alt="meizushucu" src="img/学生专区.png" width="130px">
+                <div class="nav2-title1">
+                    学生专区
+                </div>
+                <div class="nav2-title2">
+                    学生认证 多重福利
+                </div>
+            </div>
+            <div class="title-pic">
+                <img alt="meizushucu" src="./img/潮流宇宙.png" width="130px">
+                <div class="nav2-title1">
+                    潮流宇宙
+                </div>
+                <div class="nav2-title2">
+                    好物频道
+                </div>
+            </div>
+            <div class="title-pic">
+                <img alt="meizushucu" src="./img/以旧换新.jpg" width="130px">
+                <div class="nav2-title1">
+                    以旧换新
+                </div>
+                <div class="nav2-title2">
+                    新机先上手，旧机再回收
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="phone-part">
+        <h3 id="phone-title">手机</h3>
+        <div id="phone-banner">
+            <img id="phone-banner-img" src="./img/phone-banner.jpg" alt="" width="1240px">
+        </div>
+        <div id="phone-info">
+            <div class="phone-info-item">
+                <div class="phone-info-logo">
+                    免息
+                </div>
+                <div class="phone-info-title">
+                    魅族 20 PRO
+                </div>
+                <div class="phone-info-explain">
+                    第二代骁龙 8 旗舰处理器 | Flyme 10 安全高效
+                </div>
+                <div class="phone-info-price">
+                    ￥3999起
+                </div>
+                <img src="./img/phone-item1.png" alt="" class="phone-info-img" height="460px">
+            </div>
+
+            <div class="phone-info-item">
+                <div class="phone-info-logo">
+                    免息
+                </div>
+                <div class="phone-info-title">
+                    魅族 20 INFINITY 无界版
+                </div>
+                <div class="phone-info-explain">
+                    Frameless Design 无界设计 | 6.79 英寸 2K+ 21:9 无界臻彩屏
+                </div>
+                <div class="phone-info-price">
+                    ￥6299起
+                </div>
+                <img src="./img/phone-item2.png" alt="" class="phone-info-img" height="460px">
+            </div>
+        </div>
+    </div>
+
+    <div class="explore-part">
+        <div id="explore-title">
+            PANDAER 奇趣探索
+        </div>
+        <img id="explore-banner" src="./img/explore-banner.jpg" alt="" height="450px">
+        <div id="explore-good">
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left1.png" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            50W 光之风冷无线潮充
+                        </div>
+                        <div class="good-left-explain">
+                            魅族 20 PRO 无线超充适配 | 体感智控氛围灯组
+                        </div>
+                        <div class="good-left-price">
+                            ￥329
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap1-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER Air 真无线蓝牙耳机
+                    </div>
+                    <div class="good-item-explain">
+                        13mm劲音大动圈 | 25h全天候续航 | 0压舒适佩戴
+                    </div>
+                    <div class="good-item-price">
+                        ￥149
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap1-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER PASA 超触感键帽
+                    </div>
+                    <div class="good-item-explain">
+                        熊掌触感 2.0 | MAC 适配 | 108键+52键增补键帽
+                    </div>
+                    <div class="good-item-price">
+                        ￥329
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap1-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 重磅 肤感 T 恤
+                    </div>
+                    <div class="good-item-explain">
+                        270g 重磅棉料 | 精细印花 | 活性炭涂染工艺
+                    </div>
+                    <div class="good-item-price">
+                        ￥169
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left2.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            PANDAER 80W 双口车载潮充
+                        </div>
+                        <div class="good-left-explain">
+                            智控集成芯片 | 铝合金材质喷砂工艺
+                        </div>
+                        <div class="good-left-price">
+                            ￥129
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap2-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER PASA 降噪耳机
+                    </div>
+                    <div class="good-item-explain">
+                        35dB 混合降噪 | 30h 超长续航 | 电竞低延迟模式
+                    </div>
+                    <div class="good-item-price">
+                        ￥399
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap2-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        35W 便携闪充移动电源
+                    </div>
+                    <div class="good-item-explain">
+                        多协议双向快充 | 情感数码显示屏
+                    </div>
+                    <div class="good-item-price">
+                        ￥199
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap2-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 有线耳机
+                    </div>
+                    <div class="good-item-explain">
+                        旗舰级解码芯片 | Hi-Res 高解析音质
+                    </div>
+                    <div class="good-item-price">
+                        ￥129
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left3.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            PANDAER PASA 妙磁抗菌壳
+                        </div>
+                        <div class="good-left-explain">
+                            魅族 20 系列适用 | IML 双塑立体印刷
+                        </div>
+                        <div class="good-left-price">
+                            ￥139
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap3-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER PASA 游戏耳机
+                    </div>
+                    <div class="good-item-explain">
+                        环绕式立体声 | 游戏&音乐模式 | X-BASS 超低频
+                    </div>
+                    <div class="good-item-price">
+                        ￥299
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap3-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER PASA 妙磁抗菌手机壳
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 / 魅族 18s 系列 适用 | IML 双塑立体印刷
+                    </div>
+                    <div class="good-item-price">
+                        ￥139
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap3-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 宇宙之树 妙磁抗菌壳
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 系列适用 | 妙磁阵列大吸力
+                    </div>
+                    <div class="good-item-price">
+                        ￥139
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left4.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            PANDAER PASA 游戏耳机
+                        </div>
+                        <div class="good-left-explain">
+                            环绕式立体声 | 游戏 & 音乐模式 | X-BASS超低频
+                        </div>
+                        <div class="good-left-price">
+                            ￥299
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap4-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 热爱无界 妙磁抗菌手机壳
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 系列适用 | IML 双塑立体印刷
+                    </div>
+                    <div class="good-item-price">
+                        ￥149
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap4-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 紫气东来 抗菌壳
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 PRO 适用 | IML 双塑立体印刷
+                    </div>
+                    <div class="good-item-price">
+                        ￥99
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap4-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 80W GaN 潮充
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 系列快充适配 | 小巧便携散热设计
+                    </div>
+                    <div class="good-item-price">
+                        ￥149
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left5.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            PANDAER PASA 降噪耳机
+                        </div>
+                        <div class="good-left-explain">
+                            35dB 混合降噪 | 30h 超长续航 | 电竞低延迟模式
+                        </div>
+                        <div class="good-left-price">
+                            ￥399
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap5-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        67W GaN 变速箱 潮充
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 系列超充适配 | 超感智能分配 3.0
+                    </div>
+                    <div class="good-item-price">
+                        ￥209
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap5-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PASA 悬浮磁吸支架
+                    </div>
+                    <div class="good-item-explain">
+                        15N 妙磁大吸力 | 折叠伸缩骨架 | 柔韧防滑素皮
+                    </div>
+                    <div class="good-item-price">
+                        ￥129
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap5-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 重磅 肤感 T 恤
+                    </div>
+                    <div class="good-item-explain">
+                        270g 重磅棉料 | 精细印花 | 活性炭涂染工艺
+                    </div>
+                    <div class="good-item-price">
+                        ￥169
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left6.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            PANDAER × 匹克 态极拖鞋
+                        </div>
+                        <div class="good-left-explain">
+                            TAICHI 软弹中底科技 | 防水浸防滑设计
+                        </div>
+                        <div class="good-left-price">
+                            ￥169
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap6-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER PASA 手机壳礼盒
+                    </div>
+                    <div class="good-item-explain">
+                        限量发售｜设计师亲签｜限定涂装｜精美礼盒
+                    </div>
+                    <div class="good-item-price">
+                        ￥269
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap6-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        皮革妙磁手机壳
+                    </div>
+                    <div class="good-item-explain">
+                        魅族 20 PRO 适用 | 亲肤 Nappa 真皮
+                    </div>
+                    <div class="good-item-price">
+                        ￥199
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap6-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PASA 肤感 T 恤
+                    </div>
+                    <div class="good-item-explain">
+                        舒适不易变形 | 耐磨印花 | 吸汗亲肤
+                    </div>
+                    <div class="good-item-price">
+                        ￥116
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left7.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            SHARGE 随行移动电源
+                        </div>
+                        <div class="good-left-explain">
+                            10000mAh 车规级电芯 | 星轨电量指示灯
+                        </div>
+                        <div class="good-left-price">
+                            ￥199
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap7-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        宇宙之树 肤感 T 恤
+                    </div>
+                    <div class="good-item-explain">
+                        微绒发泡丝印 | SORONA 生物基纤维
+                    </div>
+                    <div class="good-item-price">
+                        ￥159
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap7-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        无尘秒贴钢化膜
+                    </div>
+                    <div class="good-item-explain">
+                        无尘仓秒贴盒 | 魅族 20 系列适用 | AF 疏油涂层
+                    </div>
+                    <div class="good-item-price">
+                        ￥69
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap7-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        Line King 240W 高能快充线
+                    </div>
+                    <div class="good-item-explain">
+                        支持魅族 20 系列 Super mCharge 快充
+                    </div>
+                    <div class="good-item-price">
+                        ￥79
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left8.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            PANDAER 67W GaN 潮充
+                        </div>
+                        <div class="good-left-explain">
+                            魅族 20 系列超充适配 | 超感稳连技术 2.0
+                        </div>
+                        <div class="good-left-price">
+                            ￥209
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap8-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        热爱无界 双肩包 限定版
+                    </div>
+                    <div class="good-item-explain">
+                        CORDURA 面料｜德国 FIDLOCK 妙磁速拆锁
+                    </div>
+                    <div class="good-item-price">
+                        ￥579
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wra8-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        热爱无界 邮差包 限定版
+                    </div>
+                    <div class="good-item-explain">
+                        CORDURA 面料｜德国 FIDLOCK 妙磁速拆锁
+                    </div>
+                    <div class="good-item-price">
+                        ￥479
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap8-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PASA 航宇之星 邮差包
+                    </div>
+                    <div class="good-item-explain">
+                        舷窗透明舱 | 特快开合扣 | 夜行反光标
+                    </div>
+                    <div class="good-item-price">
+                        ￥339
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left9.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            热爱无界 超旋音机械键盘
+                        </div>
+                        <div class="good-left-explain">
+                            半透明外壳｜三模连接｜NO.20多媒体旋钮
+                        </div>
+                        <div class="good-left-price">
+                            ￥899
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap9-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PASA 航宇之星 双肩包
+                    </div>
+                    <div class="good-item-explain">
+                        舷窗透明舱 | 特快开合扣 | 夜行反光标
+                    </div>
+                    <div class="good-item-price">
+                        ￥379
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap9-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 宇宙之树 妙磁抗菌抗摔壳
+                    </div>
+                    <div class="good-item-explain">
+                        iPhone 14 Pro 系列适用 | IML 双塑立体印刷
+                    </div>
+                    <div class="good-item-price">
+                        ￥159
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap9-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PASA 妙磁抗菌抗摔壳
+                    </div>
+                    <div class="good-item-explain">
+                        iPhone 14 Pro 系列可用 | 妙磁阵列 2.0 大吸力
+                    </div>
+                    <div class="good-item-price">
+                        ￥159
+                    </div>
+                </div>
+            </div>
+            <div class="good-wrap">
+                <div class="good-wrap-left">
+                    <img src="./img/good-left10.jpg" alt="" class="good-left-img">
+                    <div class="good-left-word">
+                        <div class="good-left-title">
+                            妙磁充电器
+                        </div>
+                        <div class="good-left-explain">
+                            编织线材 | 15W 妙磁闪充 | 妙磁收纳
+                        </div>
+                        <div class="good-left-price">
+                            ￥89
+                        </div>
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap10-1.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER × 匹克 引擎 态极 5.0 跑鞋
+                    </div>
+                    <div class="good-item-explain">
+                        PEAK TAICHI 5.0 科技 | 轻量化减负运动配重
+                    </div>
+                    <div class="good-item-price">
+                        ￥449
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap10-2.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        「绿洲」露营装备
+                    </div>
+                    <div class="good-item-explain">
+                        PANDAER 撞色奇趣涂装｜牧高笛经典露营装备
+                    </div>
+                    <div class="good-item-price">
+                        ￥169
+                    </div>
+                </div>
+                <div class="good-item">
+                    <img class="good-item-img" src="./img/good-wrap10-3.jpg" alt="" width="230px">
+                    <div class="good-item-title">
+                        PANDAER 钥匙扣
+                    </div>
+                    <div class="good-item-explain">
+                        形态自由搭配｜立体造型｜便携式腕带
+                    </div>
+                    <div class="good-item-price">
+                        ￥109
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="section-part">
+        <div id="section-title">
+            社区热帖
+        </div>
+        <div class="section-wrap">
+            <div class="section-item">
+                <img class="section-img" src="./img/section1.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo1.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">卓岳</p>
+                </div>
+                <p class="section-content">魅族 ∞ 领克无界生态发布会</p>
+                <div class="comment-tip">
+                    图文直播
+                </div>
+            </div>
+            <div class="section-item">
+                <img class="section-img" src="./img/section2.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo1.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">卓岳</p>
+                </div>
+                <p class="section-content">高朋齐聚，魅友云集</p>
+                <div class="comment-tip">
+                    星纪魅族集团联合亿咖通科技首秀
+                </div>
+            </div>
+            <div class="section-item">
+                <img class="section-img" src="./img/section3.png" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo2.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">魅族魅友家</p>
+                </div>
+                <p class="section-content">魅族 20 系列无界生态品鉴会</p>
+                <div class="comment-tip">
+                    品鉴会回顾
+                </div>
+            </div>
+            <div class="section-item">
+                <img class="section-img" src="./img/section4.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo3.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">未注册</p>
+                </div>
+                <p class="section-content">魅族 20 系列 | 定胜青</p>
+                <div class="comment-tip">
+                    魅族 20
+                </div>
+            </div>
+        </div>
+        <div class="section-wrap">
+            <div class="section-item">
+                <img class="section-img" src="./img/section5.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo4.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">萬_金龍</p>
+                </div>
+                <p class="section-content">魅族 20 系列 | 曙光银</p>
+                <div class="comment-tip">
+                    魅族 20 PRO
+                </div>
+            </div>
+            <div class="section-item">
+                <img class="section-img" src="./img/section6.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo5.png" alt="" class="section-user-img">
+                    <p class="section-user-name">用户691252476</p>
+                </div>
+                <p class="section-content">魅族 20 系列 | 破晓灰</p>
+                <div class="comment-tip">
+                    魅族 20 PRO
+                </div>
+            </div>
+            <div class="section-item">
+                <img class="section-img" src="./img/section7.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo6.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">今天开心了啊</p>
+                </div>
+                <p class="section-content">魅族 20 系列 | 定胜青</p>
+                <div class="comment-tip">
+                    魅族 20
+                </div>
+            </div>
+            <div class="section-item">
+                <img class="section-img" src="./img/section8.jpg" alt="">
+                <div class="section-user-info">
+                    <img src="./img/userinfo7.jpg" alt="" class="section-user-img">
+                    <p class="section-user-name">ZerrySong</p>
+                </div>
+                <p class="section-content">魅族 20 系列 | 热爱粉</p>
+                <div class="comment-tip">
+                    魅族 20
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flyme-part">
+        <h3 id="flyme-title">
+            Flyme
+        </h3>
+
+        <div class="flyme-wrap">
+            <img class="flyme-img" src="./img/flyme1.png" alt="">
+            <div class="flyme-item">
+                <img class="flyme-item-img" src="./img/flyme2.jpg" alt="">
+                <p class="flyme-item-title">Flyme 隐私安全白皮书</p>
+            </div>
+            <div class="flyme-item">
+                <img class="flyme-item-img" src="./img/flyme3.jpg" alt="">
+                <p class="flyme-item-title">跨越使用小障碍</p>
+            </div>
+        </div>
+        <div class="flyme-wrap">
+            <div class="flyme-item">
+                <img class="flyme-item-img" src="./img/flyme4.png" alt="">
+                <p class="flyme-item-title">全新导入滤镜</p>
+            </div>
+            <div class="flyme-item">
+                <img class="flyme-item-img" src="./img/flyme5.png" alt="">
+                <p class="flyme-item-title">全面提升续航能力</p>
+            </div>
+            <div class="flyme-item">
+                <img class="flyme-item-img" src="./img/flyme6.jpg" alt="">
+                <p class="flyme-item-title">Flyme 不得不知的小功能</p>
+            </div>
+            <div class="flyme-item">
+                <img class="flyme-item-img" src="./img/flyme7.jpg" alt="">
+                <p class="flyme-item-title">快速挽回手机数据</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-part">
+        <h3 id="video-title">
+            精彩视频
+        </h3>
+        <div class="video-wrap">
+            <div class="video-item">
+                <img src="./img/video1.jpg" alt="" class="video-img">
+                <p class="video-info">魅族 20 魅友共创·白</p>
+            </div>
+            <div class="video-item">
+                <img src="./img/video2.jpg" alt="" class="video-img">
+                <p class="video-info">魅族品牌焕新｜Infinite Passion 热爱无界</p>
+            </div>
+            <div class="video-item">
+                <img src="./img/video3.jpg" alt="" class="video-img">
+                <p class="video-info">新「奇点」魅族来定义</p>
+            </div>
+            <div class="video-item">
+                <img src="./img/video4.jpg" alt="" class="video-img">
+                <p class="video-info">魅族 20</p>
+            </div>
+        </div>
+        <div class="video-wrap">
+            <div class="video-item">
+                <img src="./img/video5.jpg" alt="" class="video-img">
+                <p class="video-info">魅族 20 PRO</p>
+            </div>
+            <div class="video-item">
+                <img src="./img/video6.jpg" alt="" class="video-img">
+                <p class="video-info">魅族 20 INFINITY 无界版</p>
+            </div>
+            <div class="video-item">
+                <img src="./img/video7.png" alt="" class="video-img">
+                <p class="video-info">「我有一个朋友」- Tim</p>
+            </div>
+            <div class="video-item">
+                <img src="./img/video8.jpg" alt="" class="video-img">
+                <p class="video-info">魅族 M3 Pro 全场景 Hi-Fi 播放器</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div id="footer-wrap">
+        <div id="recommend-contain">
+            <div class="recommend-wrap">
+                <h3 class="recommend-title">推荐产品</h3>
+                <div class="recommend-content">魅族 20</div>
+                <div class="recommend-content">魅族 20 PRO</div>
+                <div class="recommend-content">全部手机</div>
+                <div class="recommend-content">PANDAER</div>
+                <div class="recommend-content">lipro</div>
+                <div class="recommend-content">配件</div>
+            </div>
+            <div class="recommend-wrap">
+                <h3 class="recommend-title">购买渠道</h3>
+                <div class="recommend-content">官方商城</div>
+                <div class="recommend-content">零售门店</div>
+                <div class="recommend-content">线上销售授权名单</div>
+                <div class="recommend-content">企业服务</div>
+                <div class="recommend-content">M码通道</div>
+            </div>
+            <div class="recommend-wrap">
+                <h3 class="recommend-title">服务支持</h3>
+                <div class="recommend-content">服务中心</div>
+                <div class="recommend-content">维修查询</div>
+                <div class="recommend-content">备件价格查询</div>
+                <div class="recommend-content">寄修服务</div>
+                <div class="recommend-content">增值保障</div>
+                <div class="recommend-content">真伪查询</div>
+            </div>
+            <div class="recommend-wrap">
+                <h3 class="recommend-title">官方社媒</h3>
+                <div class="recommend-content">官方社区</div>
+                <div class="recommend-content">新浪微博</div>
+                <div class="recommend-content">百度贴吧</div>
+            </div>
+            <div class="recommend-wrap">
+                <h3 class="recommend-title">关于魅族</h3>
+                <div class="recommend-content">了解魅族</div>
+                <div class="recommend-content">了解我们</div>
+            </div>
+
+        </div>
+
+        <div id="kefu-contain">
+            <h3 id="kefu-title">
+                官方客服
+            </h3>
+
+            <div id="kefu-contact">
+                <div id="kefu-contact-basic">
+                    <div id="kefu-phone">
+                        400-788-3333
+                    </div>
+                    <div id="kefu-time">
+                        周一至周日 8:00 - 24:00
+                    </div>
+                </div>
+
+                <div id="kefu-contact-btn">
+                    <img id="kefu-btn-icon"
+                        src="https://fms.res.meizu.com/dms/2023/04/18/371426ca-48e9-4e2e-b919-c604bab93e3e.png" alt>
+                    <h3 id="">在线客服</h3>
+                </div>
+            </div>
+
+            <div id="subscribe">
+                <h3 id="sub-title">
+                    关注魅族
+                </h3>
+
+                <div id="sub-list">
+                    <img src="https://fms.res.meizu.com/dms/2023/05/09/6d8f49e4-bb95-456d-93c2-bbf318d9d019.png" alt=""
+                        class="sub-img">
+                    <img src="https://fms.res.meizu.com/dms/2023/05/09/37a9cb84-dbcd-4071-9351-6da2127d6df7.png" alt=""
+                        class="sub-img">
+
+                    <img src="https://fms.res.meizu.com/dms/2023/05/09/f5ebf3c0-3f08-4988-b148-ecc933835c49.png" alt=""
+                        class="sub-img">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="bottom-link">
+        <div id="link-wrap">
+            <div id="link-policy">
+                <div class="link-policy-item">举报中心</div>
+                <div class="link-policy-item">法律声明</div>
+                <div class="link-policy-item">隐私政策</div>
+                <div class="link-policy-item">营业执照</div>
+                <div class="link-policy-item">粤ICP备13003602号-2</div>
+                <div class="link-policy-item">合字B2-20170010</div>
+                <div class="link-policy-item">粤公网安备 44049102496009 号</div>
+            </div>
+
+            <div id="link-right">
+                <div id="link-right-code">
+                    ©2023 珠海星纪魅族信息技术有限公司
+                </div>
+                <div id="lang">
+                    <img src="https://fms.res.meizu.com/dms/2017/12/18/1c31db15-ab85-4932-8e6c-edfd6039bc60.png" alt=""
+                        id="lang-img">
+                    <div id="lang-word">
+                        简体中文
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
