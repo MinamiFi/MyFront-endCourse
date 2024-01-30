@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城</title>
+
+    <style type="text/css">
+        .container {
+            width: 1226px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #header {
+            height: 140px;
+            /* background-color: beige; */
+        }
+
+        #header-nav1 {
+            background-color: #333;
+            height: 40px;
+        }
+
+        #header-container1 {
+            display: flex;
+            height: 40px;
+            position: relative;
+            /* background-color: gray; */
+        }
+
+        .header-nav1-item {
+            font-size: 12px;
+            line-height: 40px;
+            margin-right: 10px;
+            /* background-color: tomato; */
+            color: #b0b0b0;
+            cursor: pointer;
+        }
+
+        .header-nav1-item:hover {
+            color: white;
+        }
+
+        #user-part {
+            position: absolute;
+            display: flex;
+            right: 0px;
+        }
+
+        #shopcar-container {
+            width: 120px;
+            display: flex;
+            background-color: #424242;
+            margin-right: 0px;
+        }
+
+        #shopcar-container:hover {
+            color: #ff6700;
+            background-color: #fff;
+        }
+
+        #shopcar {
+            width: 30px;
+            height: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 12px;
+        }
+
+        #shopcar-text {
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        #header-container2 {
+            display: flex;
+            /* background-color: wheat; */
+            height: 100px;
+            position: relative;
+
+        }
+
+        #logo-container {
+            width: 200px;
+            height: 100px;
+            /* background-color: #fff; */
+        }
+
+        #logo {
+            margin-top: 22px;
+            width: 56px;
+            height: 56px;
+        }
+
+        .nav2-item {
+            line-height: 100px;
+            margin-right: 20px;
+            font-size: 15px;
+            cursor: pointer;
+            /* background-color: aquamarine; */
+        }
+
+        #search-part {
+            position: absolute;
+            right: 0px;
+            display: flex;
+        }
+
+        #inputbox {
+            width: 250px;
+            height: 50px;
+            margin-top: 25px;
+            border: 1px #e0e0e0 solid;
+            border-right: 0px #e0e0e0 solid;
+        }
+
+        #search-btn {
+            margin-top: 25px;
+            width: 52px;
+            height: 52px;
+            border: 1px #e0e0e0 solid;
+            line-height: 55px;
+            text-align: center;
+            color: #616161;
+            cursor: pointer;
+        }
+
+        #search-btn:hover {
+            background-color: #ff6700;
+            color: #fff;
+        }
+
+        #container1 {
+            height: 670px;
+            /* background-color: yellow; */
+        }
+
+        #banner-up {
+            position: relative;
+            height: 460px;
+            margin-bottom: 14px;
+            /* background-color: turquoise; */
+        }
+
+        #banner-up-list {
+            position: absolute;
+            width: 234px;
+            height: 100%;
+            background-color: rgba(105, 101, 101, .6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .banner-up-list-item {
+            position: relative;
+            width: 234px;
+            height: 42px;
+            /* background-color: violet; */
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            color: white;
+            line-height: 42px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .banner-up-list-item:hover {
+            background-color: #ff6700;
+        }
+
+        .banner-up-list-word {
+            margin-left: 20px;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 15px;
+            font-size: 20px;
+        }
+
+        .banner-up-list-message {
+            position: absolute;
+            left: 234px;
+            top: 0;
+            height: 100%;
+            border: 1px #e0e0e0 solid;
+            width: 265px;
+            background-color: white;
+            display: none;
+        }
+
+        #banner-up-list:hover+.banner-up-list-message {
+            /* background-color: yellowgreen; */
+            display: block;
+        }
+
+        .banner-up-list-message:hover{
+            display: block;
+
+        }
+
+        .banner-up-list-message-item {
+            width: 265px;
+            height: 76px;
+            /* background-color: violet; */
+            line-height: 76px;
+            display: flex;
+        }
+
+
+        .banner-up-message-img {
+            margin-top: 18px;
+            margin-left: 18px;
+        }
+
+        .banner-up-list-message-word {
+            color: #333;
+            font-size: 14px;
+            margin-left: 18px;
+            cursor: pointer;
+        }
+
+        .banner-up-list-message-word:hover {
+            color: #ff6700;
+        }
+
+        #banner-up-img {
+            height: 460px;
+        }
+
+        #banner-down {
+            height: 170px;
+            /* background-color: tomato; */
+            display: flex;
+        }
+
+        #banner-down-list {
+            width: 234px;
+            height: 170px;
+            background-color: #5f5750;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .banner-down-list-item {
+            width: 76px;
+            height: 82px;
+            font-size: 10px;
+            text-align: center;
+            /* background-color: slategray; */
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .banner-down-list-item-img {
+            width: 24px;
+            margin-top: 20px;
+        }
+
+        .banner-down-img {
+            height: 170px;
+            width: 316px;
+            /* background-color: white; */
+            margin-left: 15px;
+        }
+
+        #container2 {
+            background-color: #f5f5f5;
+        }
+
+        #container2-header {
+            padding-top: 30px;
+            height: 120px;
+        }
+
+        #phone {
+            margin-top: 22px;
+            height: 686px;
+            display: flex;
+            flex-wrap: wrap;
+            /* background-color: skyblue; */
+        }
+
+        #phone-header {
+            width: 100%;
+            height: 58px;
+            /* background-color: yellow; */
+            line-height: 58px;
+            display: flex;
+            position: relative;
+        }
+
+        /* #phone-title {
+            font-size: 20px;
+        } */
+
+        #phone-more {
+            position: absolute;
+            right: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #phone-img1 {
+            /* margin-right: 20px; */
+            width: 234px;
+        }
+
+        #phone-item-list {
+            width: 976px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .phone-item {
+            background-color: #fff;
+            width: 234px;
+            height: 300px;
+            text-align: center;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .phone-imgs {
+            height: 160px;
+            margin-top: 20px;
+        }
+
+        .phone-item-title1 {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .phone-item-title2 {
+            color: #b0b0b0;
+            font-size: 12px;
+            margin-bottom: 10px;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .phone-item-price {
+            color: #ff6700;
+            font-size: 17px;
+        }
+
+        #service {
+            height: 79px;
+            width: 1226px;
+            /* background-color: #ff6700; */
+            display: flex;
+            border-bottom: 1px #e0e0e0 solid;
+            margin: auto;
+        }
+
+        .service-item {
+            display: flex;
+            width: 242px;
+            height: 25px;
+            margin-top: 27px;
+            margin-bottom: 27px;
+            /* background-color: #333; */
+            position: relative;
+            margin-right: 4px;
+            border-right: 1px #e0e0e0 solid;
+            cursor: pointer;
+        }
+
+
+        #service-last-item {
+            margin-right: 0px;
+            border-right: 0px;
+        }
+
+        /* .service-imgs {
+            position: absolute;
+        } */
+
+        .service-word {
+            font-size: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 25px;
+            color: #616161;
+        }
+
+        .service-word:hover {
+            color: #ff6700;
+        }
+
+        #site-info {
+            margin-top: 40px;
+            height: 352px;
+            /* background-color: lightblue; */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .info-list {
+            width: 140px;
+            height: 100%;
+            margin-right: 10px;
+            /* background-color: #f0f0f0; */
+        }
+
+        .info-list-title {
+            margin-bottom: 20px;
+        }
+
+        .info-list-item {
+            color: #757575;
+            margin-bottom: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .info-list-item:hover {
+            color: #ff6700;
+        }
+
+        #contact {
+            width: 250px;
+            height: 80px;
+            /* background-color: pink; */
+            border-left: 1px #e0e0e0 solid;
+            text-align: center;
+        }
+
+        #phone-number {
+            color: #ff6700;
+            font-size: 30px;
+        }
+
+        #time {
+            color: #b0b0b0;
+            font-size: 17px;
+        }
+
+        #contact-btn {
+            width: 120px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            color: #ff6700;
+            border: #ff6700 1px solid;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div id="header-nav1">
+            <div class="container" id="header-container1">
+                <div class="header-nav1-item">小米官网</div>
+                <div class="header-nav1-item">小米商城</div>
+                <div class="header-nav1-item">MIUI</div>
+                <div class="header-nav1-item">loT</div>
+                <div class="header-nav1-item">云服务</div>
+                <div class="header-nav1-item">天星数科</div>
+                <div class="header-nav1-item">有品</div>
+                <div class="header-nav1-item">小爱开放平台</div>
+                <div class="header-nav1-item">企业团购</div>
+                <div class="header-nav1-item">资质证照</div>
+                <div class="header-nav1-item">协议规则</div>
+                <div class="header-nav1-item">下载app</div>
+                <div class="header-nav1-item">Select Location</div>
+                <div id="user-part">
+                    <div class="header-nav1-item">登录</div>
+                    <div class="header-nav1-item">注册</div>
+                    <div class="header-nav1-item">消息通知</div>
+                    <div class="header-nav1-item" id="shopcar-container">
+
+                        <!-- <img src="./img/header/购物车.png" alt="car" id="shopcar"> -->
+                        <div id="shopcar-text">🛒购物车(0)</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="header-nav2">
+            <div class="container" id="header-container2">
+                <div id="logo-container">
+                    <img alt="logo" src="./img/logo.png" id="logo">
+                </div>
+
+                <div class="nav2-item">Xiaomi手机</div>
+                <div class="nav2-item">Redmi手机</div>
+                <div class="nav2-item">电视</div>
+                <div class="nav2-item">笔记本</div>
+                <div class="nav2-item">平板</div>
+                <div class="nav2-item">家电</div>
+                <div class="nav2-item">路由器</div>
+                <div class="nav2-item">服务中心</div>
+                <div class="nav2-item">社区</div>
+
+                <div id="search-part">
+                    <input type="text" placeholder=" 电视" id="inputbox">
+                    <div id="search-btn">🔍</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="container1">
+        <div id="banner-up" class="container">
+            <div id="banner-up-list">
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">手机</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">电视</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">家电</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">笔记本 平板</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">出行 穿戴</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">耳机 音响</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">健康 儿童</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">生活 箱包</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">智能 路由器</div>
+                    <div class="arrow">></div>
+                </div>
+                <div class="banner-up-list-item">
+                    <div class="banner-up-list-word">电脑 配件</div>
+                    <div class="arrow">></div>
+                </div>
+            </div>
+
+            <div class="banner-up-list-message">
+                <div class="banner-up-list-message-item">
+                    <img src="./img/message1.webp" alt="" width="40px" height="40px" class="banner-up-message-img">
+                    <div class="banner-up-list-message-word">Xiaomi MIX系列</div>
+                </div>
+                <div class="banner-up-list-message-item">
+                    <img src="./img/message2.webp" alt="" width="40px" height="40px" class="banner-up-message-img">
+                    <div class="banner-up-list-message-word">Xiaomi 数字系列</div>
+                </div>
+                <div class="banner-up-list-message-item">
+                    <img src="./img/message3.webp" alt="" width="40px" height="40px" class="banner-up-message-img">
+                    <div class="banner-up-list-message-word">Xiaomi Civi系列</div>
+                </div>
+                <div class="banner-up-list-message-item">
+                    <img src="./img/message4.webp" alt="" width="40px" height="40px" class="banner-up-message-img">
+                    <div class="banner-up-list-message-word">Redmi K系列</div>
+                </div>
+                <div class="banner-up-list-message-item">
+                    <img src="./img/message5.webp" alt="" width="40px" height="40px" class="banner-up-message-img">
+                    <div class="banner-up-list-message-word">Redmi Note系列</div>
+                </div>
+                <div class="banner-up-list-message-item">
+                    <img src="./img/message6.webp" alt="" width="40px" height="40px" class="banner-up-message-img">
+                    <div class="banner-up-list-message-word">Redmi 数字系列</div>
+                </div>
+            </div>
+
+
+            <img src="./img/banner.jpeg" alt="banner image" id="banner-up-img">
+        </div>
+
+        <div id="banner-down" class="container">
+            <div id="banner-down-list">
+                <div class="banner-down-list-item">
+                    <img alt="" src="./img/list1.png" class="banner-down-list-item-img">
+                    <div class="banner-down-list-word">保障服务</div>
+                </div>
+                <div class="banner-down-list-item">
+                    <img alt="" src="./img/list2.png" class="banner-down-list-item-img">
+                    <div class="banner-down-list-word">企业团购</div>
+                </div>
+                <div class="banner-down-list-item">
+                    <img alt="" src="./img/list3.png" class="banner-down-list-item-img">
+                    <div class="banner-down-list-word">F码通道</div>
+                </div>
+                <div class="banner-down-list-item">
+                    <img alt="" src="./img/list4.png" class="banner-down-list-item-img">
+                    <div class="banner-down-list-word">米粉卡</div>
+                </div>
+                <div class="banner-down-list-item">
+                    <img alt="" src="./img/list5.png" class="banner-down-list-item-img">
+                    <div class="banner-down-list-word">以旧换新</div>
+                </div>
+                <div class="banner-down-list-item">
+                    <img alt="" src="./img/list6.png" class="banner-down-list-item-img">
+                    <div class="banner-down-list-word">话费充值</div>
+                </div>
+            </div>
+
+            <div class="banner-down-img">
+                <img alt="" src="./img/banner1.jpg" height="170px" width="316px">
+            </div>
+            <div class="banner-down-img">
+                <img alt="" src="./img/banner2.jpg" height="170px" width="316px">
+            </div>
+            <div class="banner-down-img">
+                <img alt="" src="./img/banner3.jpg" height="170px" width="316px">
+            </div>
+        </div>
+    </div>
+    <div id="container2">
+        <div id="container2-header" class="container">
+            <img alt="" src="./img/banner4.webp" width="1226px">
+        </div>
+
+        <div id="phone" class="container">
+            <div id="phone-header">
+                <div id="phone-title">
+                    手机
+                </div>
+
+                <div id="phone-more">
+                    查看更多 >
+                </div>
+            </div>
+
+            <div id="phone-img1">
+                <img src="./img/phone1.webp" alt="" width="234px">
+            </div>
+
+            <div id="phone-item-list">
+                <div class="phone-item">
+                    <img alt="" src="./img/phone2.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Redmi Note 12T Pro
+                    </div>
+                    <div class="phone-item-title2">
+                        年度 LCD 屏幕之光
+                    </div>
+                    <div class="phone-item-price">
+                        1499元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone3.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Xiaomi Civi3
+                    </div>
+                    <div class="phone-item-title2">
+                        仿生双眸 天生出色
+                    </div>
+                    <div class="phone-item-price">
+                        2499元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone4.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Xiaomi 13 Ultra
+                    </div>
+                    <div class="phone-item-title2">
+                        徕卡光学全焦段四摄| 一英寸可变光圈| 徕卡专业街拍模式
+                    </div>
+                    <div class="phone-item-price">
+                        5999元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone5.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Redmi Note 12T Turbo
+                    </div>
+                    <div class="phone-item-title2">
+                        狂暴引擎 超强性能释放
+                    </div>
+                    <div class="phone-item-price">
+                        1699元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone6.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Redmi K60
+                    </div>
+                    <div class="phone-item-title2">
+                        骁龙8+｜2K 高光直屏｜5500mAh+67W闪充
+                    </div>
+                    <div class="phone-item-price">
+                        1499元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone7.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Redmi K60 Pro
+                    </div>
+                    <div class="phone-item-title2">
+                        【第二代骁龙8】狂暴引擎
+                    </div>
+                    <div class="phone-item-price">
+                        2599元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone8.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Redmi Note 12 Pro 极速版
+                    </div>
+                    <div class="phone-item-title2">
+                        高通骁龙778G，OLED柔性直屏+一亿像素
+                    </div>
+                    <div class="phone-item-price">
+                        1499元起
+                    </div>
+                </div>
+                <div class="phone-item">
+                    <img alt="" src="./img/phone9.webp" class="phone-imgs">
+                    <div class="phone-item-title1">
+                        Xiaomi 13 限量定制色
+                    </div>
+                    <div class="phone-item-title2">
+                        全新第二代骁龙8｜徕卡专业光学镜头｜徕卡原生双画质 | 6.36″超窄边屏幕｜67W小米澎湃秒充｜徕卡75mm长焦镜头
+                    </div>
+                    <div class="phone-item-price">
+                        4999元起
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <div id="service">
+        <div class="service-item">
+            <!-- <img alt="" src="" class="service-imgs"> -->
+            <div class="service-word">
+                🔧预约维修服务
+            </div>
+        </div>
+        <div class="service-item">
+            <!-- <img alt="" src="" class="service-imgs"> -->
+            <div class="service-word">
+                ⑦7天无理由退货
+            </div>
+        </div>
+        <div class="service-item">
+            <!-- <img alt="" src="" class="service-imgs"> -->
+            <div class="service-word">
+                ⑮15天免费送货
+            </div>
+        </div>
+        <div class="service-item">
+            <!-- <img alt="" src="" class="service-imgs"> -->
+            <div class="service-word">
+                🎁满69元包邮
+            </div>
+        </div>
+        <div class="service-item" id="service-last-item">
+            <!-- <img alt="" src="" class="service-imgs"> -->
+            <div class="service-word">
+                🔽1100余家售后网点
+            </div>
+        </div>
+
+    </div>
+
+    <div id="site-info" class="container">
+        <div id="info-list1" class="info-list">
+            <div class="info-list-title">选购指南</div>
+            <div class="info-list-item">手机</div>
+            <div class="info-list-item">电视</div>
+            <div class="info-list-item">笔记本</div>
+            <div class="info-list-item">平板</div>
+            <div class="info-list-item">穿戴</div>
+            <div class="info-list-item">耳机</div>
+            <div class="info-list-item">家电</div>
+            <div class="info-list-item">路由器</div>
+            <div class="info-list-item">音箱</div>
+            <div class="info-list-item">配件</div>
+        </div>
+
+        <div id="info-list2" class="info-list">
+            <div class="info-list-title">服务中心</div>
+            <div class="info-list-item">申请售后</div>
+            <div class="info-list-item">售后政策</div>
+            <div class="info-list-item">维修服务价格</div>
+            <div class="info-list-item">订单查询</div>
+            <div class="info-list-item">以旧换新</div>
+            <div class="info-list-item">保障服务</div>
+            <div class="info-list-item">防伪查询</div>
+            <div class="info-list-item">F码通道</div>
+        </div>
+
+        <div id="info-list3" class="info-list">
+            <div class="info-list-title">线下门店</div>
+            <div class="info-list-item">小米之家</div>
+            <div class="info-list-item">服务网点</div>
+            <div class="info-list-item">授权体验店/专区</div>
+        </div>
+
+        <div id="info-list4" class="info-list">
+            <div class="info-list-title">关于小米</div>
+            <div class="info-list-item">了解小米</div>
+            <div class="info-list-item">加入小米</div>
+            <div class="info-list-item">投资者关系</div>
+            <div class="info-list-item">可持续发展</div>
+            <div class="info-list-item">廉洁举报</div>
+        </div>
+
+        <div id="info-list5" class="info-list">
+            <div class="info-list-title">关注我们</div>
+            <div class="info-list-item">新浪微博</div>
+            <div class="info-list-item">官方微信</div>
+            <div class="info-list-item">联系我们</div>
+            <div class="info-list-item">公益基金会</div>
+        </div>
+
+        <div id="contact">
+            <div id="phone-number">
+                400-100-5678
+            </div>
+            <div id="time">
+                8:00-18:00（仅收市话费）
+            </div>
+            <div id="contact-btn">
+                人工客服
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
