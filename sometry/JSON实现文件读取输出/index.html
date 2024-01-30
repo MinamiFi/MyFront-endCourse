@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BannerWithJSON</title>
+    <style>
+        .logo {
+            height: 88px;
+            width: 1000px;
+            position: relative;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+
+        .logoimg {
+            height: 68px;
+            margin-left: 55px;
+            margin-top: 20px;
+        }
+
+        .nav {
+            margin: auto;
+            width: 1000px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: white;
+            display: flex;
+        }
+
+        .nav div {
+            /* border: 1px solid black; */
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            vertical-align: center;
+            line-height: 40px;
+        }
+
+        .banner {
+            width: 1280px;
+            height: 460px;
+            background-color: burlywood;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+        }
+
+        .banner-content {
+            margin: auto;
+            background-color: lightblue;
+            width: 600%;
+            height: 100%;
+            display: flex;
+        }
+
+        .banner-img {
+            height: 460px;
+            width: 1280px;
+            object-fit: contain;
+        }
+
+        .prev {
+            left: 10px;
+            background-position: 0px 0px;
+        }
+
+        .next {
+            right: 10px;
+            background-position: -24px 0px;
+        }
+
+        .next,
+        .prev {
+            position: absolute;
+            width: 25px;
+            height: 44px;
+            color: white;
+            font-size: 30px;
+            background-image: none;
+            background-repeat: no-repeat;
+            top: 220px;
+            opacity: 0.7;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img alt="logo" class="logoimg" src="">
+    </div>
+    <div class="nav">
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+        <div class="nav-content"></div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-content">
+            <img alt="bannerimg" class="bannerimg" src="">
+            <img alt="bannerimg" class="bannerimg" src="">
+            <img alt="bannerimg" class="bannerimg" src="">
+            <img alt="bannerimg" class="bannerimg" src="">
+            <img alt="bannerimg" class="bannerimg" src="">
+        </div>
+        <a class="prev"></a>
+        <a class="next"></a>
+    </div>
+</body>
+
+
+
+
+<script>
+    var logo = document.getElementsByClassName('logoimg')[0];
+    var nav = document.getElementsByClassName('nav-content');
+    var banner = document.getElementsByClassName('banner')[0];
+    var bannerimg = document.getElementsByClassName('bannerimg');
+    var next = document.getElementsByClassName('next')[0];
+    var prev = document.getElementsByClassName('prev')[0];
+
+
+    //获取JSON数据
+    const url = 'index.json';
+    const xhr = new XMLHttpRequest();
+    console.log(xhr.readyState);
+
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState)
+        if (xhr.readyState !== 4) return;
+
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+            console.log(xhr.responseText);
+            console.log(typeof xhr.responseText);
+
+            var data = JSON.parse(xhr.responseText);
+            console.log(data);
+            console.log(data.logo);
+            console.log(data.nav);
+            console.log(data.arrow);
+            console.log(data.banner)
+        }
+
+        //把数据输出到网页
+        //logo
+        logo.setAttribute('src', data.logo);
+        //导航条
+        for (let i = 0; i < 10; i++) {
+            nav[i].innerHTML = data.nav[i];
+        }
+
+        //banner图
+        for (let i = 0; i < 5; i++) {
+            bannerimg[i].setAttribute('src', data.banner[i]);
+        }
+
+        //arrow
+        next.style.cssText = "background-image: url(" + data.arrow + ");";
+        prev.style.cssText = "background-image: url(" + data.arrow + ");";
+
+        //移到banner图上面出现箭头，移除箭头消失
+        banner.addEventListener('mouseover', function () {
+            next.style.display = 'block';
+            prev.style.display = 'block';
+
+        });
+        banner.addEventListener('mouseout', function () {
+            next.style.display = 'none';
+            prev.style.display = 'none';
+        });
+        
+        
+    };
+    xhr.open('GET', url, true);
+    xhr.send(null);
+
+
+</script>
+
+</html>

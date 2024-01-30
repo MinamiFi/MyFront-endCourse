@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        a,
+        a:hover,
+        a:visited {
+            text-decoration: none;
+        }
+
+        .content {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(128, 128, 128, 0.2);
+            margin: auto;
+
+        }
+
+        .title {
+            width: 70px;
+            height: 60px;
+            margin: auto;
+        }
+
+        .title h1 {
+            padding-top: 20px;
+        }
+
+        .box {
+            margin-top: 20px;
+            width: 500px;
+            height: 740px;
+            /* background-color: bisque; */
+        }
+
+        .account {
+            padding-bottom: 10px;
+            width: 300px;
+            height: 40px;
+            margin: auto;
+            display: flex;
+        }
+
+        .account-title {
+            margin-top: 8px;
+            width: 60px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .account-text {
+            width: 200px;
+            height: 40px;
+            font-size: 18px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            /* color:rgba(128, 128, 128, 0.5); */
+        }
+
+        .passowrd {
+            padding-bottom: 10px;
+            width: 300px;
+            height: 40px;
+            margin: auto;
+            display: flex;
+        }
+
+        .password-title {
+            margin-top: 8px;
+            width: 60px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .password-text {
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            margin: auto;
+            position: relative;
+        }
+
+        .login-btn {
+            margin: auto;
+            font-size: 20px;
+            width: 100px;
+            height: 40px;
+            background-color: darkseagreen;
+            border: 1px #888 solid;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .others {
+            width: 200px;
+            height: 40px;
+            margin: auto;
+            position: relative;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .forget {
+            cursor: pointer;
+            width: 60px;
+        }
+
+        .signin {
+            cursor: pointer;
+            width: 60px;
+        }
+
+        .signin-word,
+        .forget-word {
+            font-size: 10px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="title">
+            <h1>登录</h1>
+        </div>
+
+        <div class="box">
+            <div class="account">
+                <div class="account-title">账号</div>
+                <input type="text" class="account-text" onfocusout="accountfunction()" value="手机号">
+            </div>
+            <div class="passowrd">
+                <div class="password-title">密码</div>
+                <input type="password" class="password-text">
+            </div>
+
+            <div class="btn">
+                <input type="button" class="login-btn" value="登录">
+            </div>
+            <div class="others">
+                <div class="forget"><a href="" class="forget-word">忘记密码</a></div>
+                <div class="signin"><a href="./signin.html" class="signin-word">立即注册</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var account = document.getElementsByClassName('account-text')[0];
+        var passowrd = document.getElementsByClassName('password-text')[0];
+        var login = document.getElementsByClassName('login-btn')[0];
+        var phonecheck = /^1\d{10}$/;
+
+        //输入时清空文本框
+        account.addEventListener("focus", function () {
+            console.log('success');
+            account.value = '';
+        })
+
+        //检测手机号是否合法
+        account.addEventListener("focusout", function () {
+            if (!phonecheck.test(account.value)) {
+                alert("请输入正确的手机号");
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

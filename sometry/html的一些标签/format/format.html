@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局标签</title>
+    <style type="text/css">
+        .header{
+            background-color: antiquewhite;
+        }
+        .main{
+            background-color: aqua;
+        }
+        .footer{
+            background-color: chocolate;
+        }
+        .logo{
+            background-color: beige;
+            width: 1280px;
+            height: 110px;
+        }
+        .naver{
+            background-color: aquamarine;
+            width: 1280px;
+            height: 40px;
+            line-height: 40px;
+        }
+        .navitems{
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 70px;
+            height: 40px;
+        }
+        .banner{
+            width: 1280px;
+            height: 524px;
+        }
+        .bannerimg{
+            width: 1280px;
+            height: 524px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="header">
+        <div id="logo" class="logo">
+            <img src="img/logo.png" width="268px" height="65px" class="hdulogo"></img>
+            <img src="img/motto.png" width="365px" height="50" class="motto"></img>
+        </div>
+        <div id="naver" class="naver">
+            <ul id="navitems" class="navitems">
+                <li>网站首页</li>
+                <li>校情纵览</li>
+                <li>人才培养</li>
+                <li>科学研究</li>
+                <li>师资团队</li>
+                <li>招生就业</li>
+                <li>校园文化</li>
+                <li>合作交流</li>
+                <li>服务信息</li>
+                <li>ENGLISH</li>
+            </ul>
+        </div>
+        <div id="banner" class="banner">
+            <img src="./img/banner.jpg" class="bannerimg"></img>
+        </div>
+    </div>
+    <div id="main" class="main">
+        <div id="content">content</div>
+        <div id="link">链接区</div>
+    </div>
+    <div id="footer" class="footer">
+        页脚
+    </div>
+
+<hr>
+
+    <header>
+        <div id="logo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorum, ut consequuntur saepe obcaecati quis, inventore magni reiciendis fugiat voluptates esse adipisci odio, similique asperiores aliquid porro molestias est eum!go</div>
+        <nav id="nav">导航条</nav>
+        <div id="banner">banner</div>
+    </header>
+    <main>
+        <article id="article">文章内容</article>
+        <div id="link">链接区</div>
+    </main>
+    <footer id="footer">
+        页脚
+    </footer>
+</body>
+</html>

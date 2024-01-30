@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="./unpkg.com_axios@1.5.0_dist_axios.min.js"></script>
+    <script src="./js/vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="weather">
+    </div>
+</body>
+<script>
+    // const axios = require('axios')
+    axios.get('https://devapi.qweather.com/v7/weather/3d', { location: 101210101, key: "f2e4b227caa340bfacc70039e69829ad" })
+        .then(function (response) {
+            // 处理成功情况
+            console.log(response);
+            let data = response.data;
+            // console.log(data);
+        })
+        .catch(function (error) {
+            // 处理错误情况
+            console.log(error);
+        })
+        .then(function () {
+            console.log('finished')
+            // 总是会执行
+        });
+</script>
+
+</html>

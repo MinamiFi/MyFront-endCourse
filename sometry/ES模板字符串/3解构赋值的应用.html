@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值的应用</title>
+</head>
+
+<body>
+    <script>
+        //mission1
+        let x = 10, y = 20, z = 30;
+        console.log(x, y, z);
+        [x, y, z] = [z, x, y];
+        console.log(x, y, z);
+
+
+        //mission2
+        let node = {
+            type: "Identifier",
+            name: "ES",
+            loc: {
+                start: ["line", "column"],
+                end: {
+                    line: 1,
+                    column: 4
+                }
+            }
+        };
+
+        //m,n 即为所提取的变量
+        let {
+            loc,
+            loc: {
+                start: [m,],
+                end: {
+                    line: n
+                }
+            }
+        } = node;
+        console.log(m);
+        console.log(n);
+    </script>
+</body>
+
+</html>

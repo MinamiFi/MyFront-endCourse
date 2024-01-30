@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set去除重复单词</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    const sentence = 'study hard hard and make progress every day';
+    const word = sentence.split(" ");
+    console.log(word);
+
+    const s = new Set(word);
+    console.log(s);
+
+    const output = [...s].join(" ");
+    console.log(output);
+</script>
+
+</html>

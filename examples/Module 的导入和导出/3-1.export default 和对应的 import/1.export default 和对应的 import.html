@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>export default 和对应的 import</title>
+  </head>
+  <body>
+    <script type="module">
+      // 1.认识导出和导入
+      // 导出的东西可以被导入（import），并访问到
+
+      // 一个模块没有导出，也可以将其导入
+      // 被导入的代码都会执行一遍，也仅会执行一遍
+      // import './module.js';
+      // import './module.js';
+      // import './module.js';
+
+      // 2.基本用法
+      // 可以随便起名
+      import age from './module.js';
+      console.log(age);
+
+      // 一个模块只能有一个 export default
+    </script>
+  </body>
+</html>
