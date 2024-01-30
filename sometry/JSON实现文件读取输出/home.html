@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            border: 2px dotted red;
+            margin: auto;
+            width: 1200px;
+            height: 500px;
+        }
+
+        .box2 {
+            background-color: yellowgreen;
+            width: 200px;
+            height: 40px;
+            /* position: fixed; */
+            left: 0;
+            top: 0;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            /* background-image: radial-gradient(50% 50%, red, blue); */
+            /* transform: translate(50px, 100px); */
+            @keyframes flash {
+                from{opacity: 0;}
+                to{opacity: 1;}
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box3">
+            vvv
+        </div>
+        <div class="box2">
+            00
+        </div>
+    </div>
+
+</body>
+
+</html>

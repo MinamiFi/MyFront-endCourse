@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS转换</title>
+    <style type="text/css">
+        .div0{
+            width: 220px;
+            height: 220px;
+            border: 1px solid red;
+            margin: auto;           
+            perspective: 300px;
+
+        }
+        .div1{
+            width: 200px;
+            height: 200px;            
+            background-color: bisque;
+            margin: auto;      
+            margin-top: 10px;     
+            background-image: url(./img/jack-jack.png);
+        }
+        .div1:hover{
+            /* 位移 */
+            /* transform:translate(200px,100px); */
+            /* 缩放 */
+            /* transform:scale(1.5,1.5); */
+            /* 旋转 */
+            /* transform:rotate(45deg); */
+            /* 斜切 */
+            /* transform:skew(45deg,30deg); */
+            /* 组给写法 */
+            /* transform:rotate(45deg) translate(100px,100px) scale(1.5) skew(10deg,-20deg); */
+            /* matrix位移 */
+            /* transform: matrix(1,0,0,1,200,200); */
+            /* matrix缩放 */
+            /* transform: matrix(1.5,0,0,1.5,0,0); */
+            /* matrix旋转30度 */
+            /* transform: matrix(0.965,0.258,-0.258,0.965,0,0); */
+            /* matrix斜切30度*/
+            /* transform: matrix(1,0.577,0.577,1,0,0); */
+            /* transform-origin改变坐标原点 */  
+            /* transform-origin: left bottom;
+            transform:rotate(45deg); */
+
+            /* Perspective透视 */            
+            transform: rotateX(30deg) translateX(100px) translateY(100px) translateZ(100px);
+            
+            /* transform:rotate(45deg) translate(100px,100px) scale(1.5) skew(10deg,-20deg);
+            perspective:300px; */
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div0">
+        <div class="div1">
+
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>

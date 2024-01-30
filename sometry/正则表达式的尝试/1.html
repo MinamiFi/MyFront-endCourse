@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify</title>
+</head>
+<body>
+    <script>
+        // 验证五位大小写字母
+        var str1='abdss'
+        var regexp1=/^[A-Za-z]{5}$/
+        console.log(regexp1.test(str1));
+
+        // 五位字符，小写字母或者.
+        var str2='s.swf'
+        var regexp2=/^[a-z/.]{5}$/
+        console.log(regexp2.test(str2));
+
+        // 四位小写字母，最后一个不是m
+        var str3='s.swf'
+        var regexp3=/^[a-z]{3}[a-ln-z]$/
+        console.log(regexp3.test(str3));
+
+        //手机号码，11位数字，以一开头
+        var str4='11111111111'
+        var regexp4=/^1\d{10}$/;
+        console.log(regexp4.test(str4));
+        
+
+        
+    </script>
+</body>
+</html>

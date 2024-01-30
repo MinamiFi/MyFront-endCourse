@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+        #container{
+            margin: auto;
+            height: auto;
+            width: 400px;
+        }
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <input type="text" id="text">
+        <input type="button" value="添加" id="btn">
+        <ol></ol>
+    </div>
+
+    <script>
+        //选择
+        let ol = document.querySelector("ol")
+        let btn = document.querySelector("#btn")
+        let text = document.querySelector("#text")
+        //指示器
+        let flag = 0;
+        //读取localstorage中的数据
+        while (localStorage.getItem(flag)) {
+            //创建节点
+            let li = document.createElement("li");
+            li.innerText = localStorage.getItem(flag);
+            //挂载到ol标签下
+            ol.appendChild(li);
+            flag++;
+        }
+        //生成li标签
+        btn.addEventListener("click", function () {
+            if (text.value !== "") {
+                //创建节点
+                let li = document.createElement("li");
+                //存储到节点
+                li.innerText = text.value;
+                //清空文本框
+                text.value = "";
+                //挂载到ol标签下
+                ol.appendChild(li);
+                flag++;
+                store();
+            }
+        });
+        text.addEventListener("keydown", function (e) {
+            console.log(e.code)
+            if (text.value !== "") {
+                if (e.code == 'Enter') {
+                    //创建节点
+                    let li = document.createElement("li");
+                    //存储到节点
+                    li.innerText = text.value;
+                    //清空文本框
+                    text.value = "";
+                    //挂载到ol标签下
+                    ol.appendChild(li);
+                    flag++;
+                    store();
+                }
+            }
+        })
+
+        //移除数据
+        ol.addEventListener("mouseover", function () {
+            if (flag) {
+                let li = document.querySelectorAll("li");
+                for (let i = 0; i < flag; i++) {
+                    li[i].addEventListener("click", function () {
+                        ol.removeChild(li[i]);
+                        store();
+                        flag--;
+                    })
+                }
+            }
+        })
+
+        //存储数据
+        function store() {
+            for (let i = 0; i < flag; i++) {
+                localStorage.removeItem(i);
+            }
+            let li = document.querySelectorAll("li");
+            for (let i = 0; i < flag; i++) {
+                localStorage.setItem(i, li[i].innerText);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

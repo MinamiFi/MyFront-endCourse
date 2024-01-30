@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for of 改第一个o为大写</title>
+</head>
+
+<body></body>
+
+<script>
+  let arr = ['C', 'm', 'o', 'o', 'c'];
+
+  // 遍历数组，获取每个元素的索引和值
+  for (let [index, value] of arr.entries()) {
+    // 如果当前值是小写字母'o'，就将其替换为大写字母'O'
+    if (value === 'o') {
+      arr[index] = value.toUpperCase();
+      break;
+    }
+  }
+
+  // 输出
+  console.log(arr);
+
+</script>
+
+</html>

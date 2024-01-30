@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #btn{
+            width: 40px;
+            text-align: center;
+        }
+        #content{
+            /* width: 200px; */
+            /* height: 200px; */
+            /* border: 1px solid #000; */
+            margin-top: 20px;
+        }
+  
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" id="text" value="">
+        <input type="button" id="botton" value="添加">
+        <!-- <div id="result"></div> -->
+        <div id="content"> 
+            <ul id="ul"></ul>
+        </div>
+    </form>
+    
+    <script>
+        
+        var botton=document.getElementById('botton');
+        var form=document.getElementById('form');
+        var ul=document.getElementById('ul');
+        var content=document.getElementById('content');
+        
+      
+        if(typeof(Storage)!=="undefined"){
+        ul.innerHTML=localStorage.getItem("list")//插入之前的存储
+        }
+
+    //  点击botton添加待办项
+        botton.onclick=function(){
+            
+            var text=document.getElementById('text').value//获取输入框的值text
+            var li=document.createElement('li');//添加新项
+            ul.appendChild(li);//挂起
+            li.innerHTML=text;//设置li的内容
+            li.setAttribute('onclick','del(this)');//设置li的属性
+            localStorage.setItem("list",ul.innerHTML);//存ul的内容
+        }
+        
+
+        
+        
+
+      
+
+        // 点击任意项删除此项
+        function del(obj){
+
+                ul.removeChild(obj)
+                localStorage.setItem("list",ul.innerHTML)//存ul的内容
+
+        }
+
+
+        // var lis=document.getElementsByTagName('li')//得到li[count]数组/节点列表
+        // var count=lis.length//得到数组长度
+        // localStorage.setItem("count",count)//存项的个数
+        // for(var i=0;i<count;i++){
+        //      lis[i].onclick=function(){
+        //         ul.removeChild(this)
+        //         localStorage.setItem("list",ul.innerHTML)//存ul的内容
+        //          }
+        //     }
+
+
+       //localStorage.clear()
+
+   
+
+    </script>
+   
+</body>
+</html>

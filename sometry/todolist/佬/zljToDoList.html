@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Todolist</h2>
+    <form id="list">
+        <input type="text" id="input" placeholder="请输入事项">
+        <button  id="addlist" type="button">添加</button>
+    </form>
+    <ul id="ull">
+
+    </ul>
+    <script>
+        var addlist = document.getElementById('addlist');
+        if(localStorage.getItem('todos')){
+            var ull = document.getElementById('ull')
+            var uu = localStorage.getItem('todos');
+            ull.innerHTML = uu //innerHTML可以解析元素！
+            var i;
+            var lis = document.querySelectorAll('#ull li');
+            // console.log(lis.length)
+            for(i=0;i<lis.length;i++)
+            {   
+                lis[i].onclick=function(){
+                    this.remove();
+                }
+            }
+            var ul = document.getElementById('ull');
+            localStorage.getItem('todos',ull.innerHTML);
+            // lis[0].onclick=function(){
+            //         lis[0].remove();
+            // }
+        }
+        var ull=document.getElementById('ull');
+        addlist.onclick=function(){
+            event.preventDefault();
+            var text = document.getElementById('input').value;
+            var li=document.createElement('li');
+            li.innerHTML=text;
+            ull.appendChild(li);
+            li.onclick=function(){
+                li.remove();
+            }
+            localStorage.setItem('todos',ull.innerHTML);
+        }
+    </script>
+</body>
+</html>
